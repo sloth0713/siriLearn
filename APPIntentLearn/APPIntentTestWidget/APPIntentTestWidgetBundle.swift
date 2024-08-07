@@ -12,9 +12,11 @@ import SwiftUI
 struct APPIntentTestWidgetBundle: WidgetBundle {
     var body: some Widget {
 //        APPIntentTestWidget() 需要注释
-        APPIntentTestWidgetControl()
+//        APPIntentTestWidgetControl()
         APPIntentTestWidgetLiveActivity()
-//        StaticWidgetControlToogle()//这个不知道为啥也需要注释
-        StaticWidgetControlButton()//这个不知道为啥也需要注释
+        //使用extension调试时最多配置一个widget，否则会报错
+        StaticWidgetControlToogle()
+        StaticWidgetControlButton()
+        OpenAppWidgetControl()
     }
 }

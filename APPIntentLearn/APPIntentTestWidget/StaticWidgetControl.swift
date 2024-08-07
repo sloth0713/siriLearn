@@ -10,13 +10,13 @@ import SwiftUI
 import WidgetKit
 
 struct StaticWidgetControlToogle: ControlWidget {
-    static let kind: String = "yjx-xcdebug.APPIntentLearn.StaticToggleWidgetControl"
+    static let kind: String = "yjx-xcdebug.APPIntentLearn.APPIntentTestWidget_SimpleTimer"
 
     var body: some ControlWidgetConfiguration {
         StaticControlConfiguration(kind: Self.kind) {
-            ControlWidgetToggle(isOn: ShareManager.shared.isTurnedOn, action: SimpleTimerIntent()) { isTurnedOn in
-                Image(systemName: ShareManager.shared.isTurnedOn ? "fan.fill" : "fan")
-                Text(ShareManager.shared.isTurnedOn ? "Turned On" : "Turned Off")
+            ControlWidgetToggle(isOn: ShareManager.shared.isTimerOn, action: SimpleTimerIntent()) { isTurnedOn in
+                Image(systemName: ShareManager.shared.isTimerOn ? "fan.fill" : "fan")
+                Text(ShareManager.shared.isTimerOn ? "Turned On" : "Turned Off")
             } label: {
                 Text("fan")
             }
@@ -26,13 +26,13 @@ struct StaticWidgetControlToogle: ControlWidget {
 }
 
 struct StaticWidgetControlButton: ControlWidget {
-    static let kind: String = "yjx-xcdebug.APPIntentLearn.StaticButtonWidgetControl"//不能重复，不然会有问题
+    static let kind: String = "yjx-xcdebug.APPIntentLearn.APPIntentTestWidget_ButtonWidget"
 
     var body: some ControlWidgetConfiguration {
         StaticControlConfiguration(kind: Self.kind) {
-            ControlWidgetButton( action: ButtonWidgetControlOpenAPPIntent()){
+            ControlWidgetButton( action: ButtonWidgetControlIntent()){
                 Image(systemName: "play.rectangle.fill")
-                Text("open app page")
+                Text("Button Control")
             }
         }
         .displayName("Button Control")
@@ -41,16 +41,13 @@ struct StaticWidgetControlButton: ControlWidget {
 }
 
 
-struct ButtonWidgetControlOpenAPPIntent: AppIntent {
-    static var title: LocalizedStringResource = "title_Yjx_ButtonWidgetControlOpenAPPIntent"
-    static var description = IntentDescription("description_Yjx_ButtonWidgetControlOpenAPPIntent")
-
-//    static let openAppWhenRun: Bool = true//这里需要把主target作为membership
+struct ButtonWidgetControlIntent: AppIntent {
+    static var title: LocalizedStringResource = "title_Yjx_ButtonWidgetControlIntent"
+    static var description = IntentDescription("description_Yjx_ButtonWidgetControlIntent")
     
     @MainActor
     func perform() async throws -> some IntentResult {
         print("fasdfdsa");
-//        return .result(dialog: IntentDialog(stringLiteral: "fffff"))
         return .result()//不能加UI
     }
 }
@@ -62,11 +59,9 @@ struct SimpleTimerIntent: SetValueIntent {
     
     @Parameter(title: "is Turned On")
     var value: Bool
-
+    @MainActor
     func perform() async throws -> some IntentResult {
-        // Start the timer…
-//        ShareManager.shared.startTime()
-        ShareManager.shared.isTurnedOn = value
+        ShareManager.shared.startTime()
         return .result()
     }
 }
