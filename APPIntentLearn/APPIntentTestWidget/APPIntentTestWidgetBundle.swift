@@ -14,9 +14,11 @@ struct APPIntentTestWidgetBundle: WidgetBundle {
 //        APPIntentTestWidget() 需要注释
 //        APPIntentTestWidgetControl()
         APPIntentTestWidgetLiveActivity()
+        
         //使用extension调试时最多配置一个widget，否则会报错
         StaticWidgetControlToogle()
         StaticWidgetControlButton()
         OpenAppWidgetControl()
+        ConfiguredWidgetControl()
     }
 }

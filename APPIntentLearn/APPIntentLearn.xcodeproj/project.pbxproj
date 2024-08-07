@@ -28,6 +28,7 @@
 		2BBCD0082C635C59004EB8C9 /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0062C63567B004EB8C9 /* ShareManager.swift */; };
 		2BBCD00A2C6360B6004EB8C9 /* OpenAppWidgetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0092C6360AA004EB8C9 /* OpenAppWidgetControl.swift */; };
 		2BBCD00B2C63612D004EB8C9 /* OpenAppWidgetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0092C6360AA004EB8C9 /* OpenAppWidgetControl.swift */; };
+		2BBCD00D2C636495004EB8C9 /* ConfiguredWidgetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD00C2C636474004EB8C9 /* ConfiguredWidgetControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		2BBCD0042C635659004EB8C9 /* StaticWidgetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticWidgetControl.swift; sourceTree = "<group>"; };
 		2BBCD0062C63567B004EB8C9 /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 		2BBCD0092C6360AA004EB8C9 /* OpenAppWidgetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAppWidgetControl.swift; sourceTree = "<group>"; };
+		2BBCD00C2C636474004EB8C9 /* ConfiguredWidgetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredWidgetControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				2BBCD0092C6360AA004EB8C9 /* OpenAppWidgetControl.swift */,
+				2BBCD00C2C636474004EB8C9 /* ConfiguredWidgetControl.swift */,
 				2BBCD0062C63567B004EB8C9 /* ShareManager.swift */,
 				2BBCD0042C635659004EB8C9 /* StaticWidgetControl.swift */,
 				2BBCCFF02C6352B0004EB8C9 /* APPIntentTestWidgetLiveActivity.swift */,
@@ -406,6 +409,7 @@
 				2BBCD0072C63567C004EB8C9 /* ShareManager.swift in Sources */,
 				2BBCCFF12C6352B0004EB8C9 /* APPIntentTestWidgetLiveActivity.swift in Sources */,
 				2BBCCFF92C6352B0004EB8C9 /* AppIntent.swift in Sources */,
+				2BBCD00D2C636495004EB8C9 /* ConfiguredWidgetControl.swift in Sources */,
 				2BBCD0052C635664004EB8C9 /* StaticWidgetControl.swift in Sources */,
 				2BBCD00A2C6360B6004EB8C9 /* OpenAppWidgetControl.swift in Sources */,
 				2BBCCFF32C6352B0004EB8C9 /* APPIntentTestWidgetBundle.swift in Sources */,
