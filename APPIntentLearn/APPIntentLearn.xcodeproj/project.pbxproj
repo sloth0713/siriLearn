@@ -29,6 +29,15 @@
 		2BBCD00A2C6360B6004EB8C9 /* OpenAppWidgetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0092C6360AA004EB8C9 /* OpenAppWidgetControl.swift */; };
 		2BBCD00B2C63612D004EB8C9 /* OpenAppWidgetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0092C6360AA004EB8C9 /* OpenAppWidgetControl.swift */; };
 		2BBCD00D2C636495004EB8C9 /* ConfiguredWidgetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD00C2C636474004EB8C9 /* ConfiguredWidgetControl.swift */; };
+		2BBCD00F2C636D57004EB8C9 /* TimerLiveActivityControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD00E2C636D42004EB8C9 /* TimerLiveActivityControl.swift */; };
+		2BBCD0122C636F6E004EB8C9 /* TimerLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0112C636F5C004EB8C9 /* TimerLiveActivity.swift */; };
+		2BBCD0132C637252004EB8C9 /* TimerLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0112C636F5C004EB8C9 /* TimerLiveActivity.swift */; };
+		2BBCD0152C638FF0004EB8C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0142C638FE3004EB8C9 /* AppDelegate.swift */; };
+		2BBCD0172C63923F004EB8C9 /* ShareTimerLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0162C63922D004EB8C9 /* ShareTimerLiveActivity.swift */; };
+		2BBCD0182C63923F004EB8C9 /* ShareTimerLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0162C63922D004EB8C9 /* ShareTimerLiveActivity.swift */; };
+		2BBCD01A2C6392E2004EB8C9 /* LiveActivitiyIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0192C6392D8004EB8C9 /* LiveActivitiyIntents.swift */; };
+		2BBCD01B2C6392E2004EB8C9 /* LiveActivitiyIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0192C6392D8004EB8C9 /* LiveActivitiyIntents.swift */; };
+		2BBCD0212C6399CE004EB8C9 /* TimerLiveActivityControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD00E2C636D42004EB8C9 /* TimerLiveActivityControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +103,13 @@
 		2BBCD0062C63567B004EB8C9 /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 		2BBCD0092C6360AA004EB8C9 /* OpenAppWidgetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAppWidgetControl.swift; sourceTree = "<group>"; };
 		2BBCD00C2C636474004EB8C9 /* ConfiguredWidgetControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguredWidgetControl.swift; sourceTree = "<group>"; };
+		2BBCD00E2C636D42004EB8C9 /* TimerLiveActivityControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerLiveActivityControl.swift; sourceTree = "<group>"; };
+		2BBCD0112C636F5C004EB8C9 /* TimerLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerLiveActivity.swift; sourceTree = "<group>"; };
+		2BBCD0142C638FE3004EB8C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2BBCD0162C63922D004EB8C9 /* ShareTimerLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareTimerLiveActivity.swift; sourceTree = "<group>"; };
+		2BBCD0192C6392D8004EB8C9 /* LiveActivitiyIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivitiyIntents.swift; sourceTree = "<group>"; };
+		2BBCD01F2C63975F004EB8C9 /* APPIntentLearn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = APPIntentLearn.entitlements; sourceTree = "<group>"; };
+		2BBCD0202C639890004EB8C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +172,9 @@
 		2BBCCFBA2C635285004EB8C9 /* APPIntentLearn */ = {
 			isa = PBXGroup;
 			children = (
+				2BBCD0202C639890004EB8C9 /* Info.plist */,
+				2BBCD01F2C63975F004EB8C9 /* APPIntentLearn.entitlements */,
+				2BBCD0142C638FE3004EB8C9 /* AppDelegate.swift */,
 				2BBCCFBB2C635285004EB8C9 /* APPIntentLearnApp.swift */,
 				2BBCCFBD2C635285004EB8C9 /* ContentView.swift */,
 				2BBCCFBF2C635287004EB8C9 /* Assets.xcassets */,
@@ -201,12 +220,13 @@
 		2BBCCFEF2C6352B0004EB8C9 /* APPIntentTestWidget */ = {
 			isa = PBXGroup;
 			children = (
+				2BBCD0102C636F4A004EB8C9 /* LiveActivity */,
+				2BBCCFF22C6352B0004EB8C9 /* APPIntentTestWidgetBundle.swift */,
 				2BBCD0092C6360AA004EB8C9 /* OpenAppWidgetControl.swift */,
 				2BBCD00C2C636474004EB8C9 /* ConfiguredWidgetControl.swift */,
 				2BBCD0062C63567B004EB8C9 /* ShareManager.swift */,
 				2BBCD0042C635659004EB8C9 /* StaticWidgetControl.swift */,
 				2BBCCFF02C6352B0004EB8C9 /* APPIntentTestWidgetLiveActivity.swift */,
-				2BBCCFF22C6352B0004EB8C9 /* APPIntentTestWidgetBundle.swift */,
 				2BBCCFF42C6352B0004EB8C9 /* APPIntentTestWidgetControl.swift */,
 				2BBCCFF62C6352B0004EB8C9 /* APPIntentTestWidget.swift */,
 				2BBCCFF82C6352B0004EB8C9 /* AppIntent.swift */,
@@ -214,6 +234,17 @@
 				2BBCCFFC2C6352B2004EB8C9 /* Info.plist */,
 			);
 			path = APPIntentTestWidget;
+			sourceTree = "<group>";
+		};
+		2BBCD0102C636F4A004EB8C9 /* LiveActivity */ = {
+			isa = PBXGroup;
+			children = (
+				2BBCD0192C6392D8004EB8C9 /* LiveActivitiyIntents.swift */,
+				2BBCD0162C63922D004EB8C9 /* ShareTimerLiveActivity.swift */,
+				2BBCD0112C636F5C004EB8C9 /* TimerLiveActivity.swift */,
+				2BBCD00E2C636D42004EB8C9 /* TimerLiveActivityControl.swift */,
+			);
+			path = LiveActivity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,8 +408,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BBCD01B2C6392E2004EB8C9 /* LiveActivitiyIntents.swift in Sources */,
+				2BBCD0152C638FF0004EB8C9 /* AppDelegate.swift in Sources */,
 				2BBCD0082C635C59004EB8C9 /* ShareManager.swift in Sources */,
+				2BBCD0172C63923F004EB8C9 /* ShareTimerLiveActivity.swift in Sources */,
 				2BBCD00B2C63612D004EB8C9 /* OpenAppWidgetControl.swift in Sources */,
+				2BBCD0132C637252004EB8C9 /* TimerLiveActivity.swift in Sources */,
+				2BBCD0212C6399CE004EB8C9 /* TimerLiveActivityControl.swift in Sources */,
 				2BBCCFBE2C635285004EB8C9 /* ContentView.swift in Sources */,
 				2BBCCFBC2C635285004EB8C9 /* APPIntentLearnApp.swift in Sources */,
 			);
@@ -409,11 +445,15 @@
 				2BBCD0072C63567C004EB8C9 /* ShareManager.swift in Sources */,
 				2BBCCFF12C6352B0004EB8C9 /* APPIntentTestWidgetLiveActivity.swift in Sources */,
 				2BBCCFF92C6352B0004EB8C9 /* AppIntent.swift in Sources */,
+				2BBCD0182C63923F004EB8C9 /* ShareTimerLiveActivity.swift in Sources */,
+				2BBCD00F2C636D57004EB8C9 /* TimerLiveActivityControl.swift in Sources */,
 				2BBCD00D2C636495004EB8C9 /* ConfiguredWidgetControl.swift in Sources */,
+				2BBCD0122C636F6E004EB8C9 /* TimerLiveActivity.swift in Sources */,
 				2BBCD0052C635664004EB8C9 /* StaticWidgetControl.swift in Sources */,
 				2BBCD00A2C6360B6004EB8C9 /* OpenAppWidgetControl.swift in Sources */,
 				2BBCCFF32C6352B0004EB8C9 /* APPIntentTestWidgetBundle.swift in Sources */,
 				2BBCCFF72C6352B0004EB8C9 /* APPIntentTestWidget.swift in Sources */,
+				2BBCD01A2C6392E2004EB8C9 /* LiveActivitiyIntents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,12 +602,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = APPIntentLearn/APPIntentLearn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"APPIntentLearn/Preview Content\"";
 				DEVELOPMENT_TEAM = 5Z4W2PM247;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = APPIntentLearn/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -591,12 +634,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = APPIntentLearn/APPIntentLearn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"APPIntentLearn/Preview Content\"";
 				DEVELOPMENT_TEAM = 5Z4W2PM247;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = APPIntentLearn/Info.plist;
+				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

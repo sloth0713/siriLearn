@@ -14,6 +14,7 @@ class ShareManager {
     var isTurnedOn: Bool = false
     var caffeineInTake: CGFloat = 0
     var isTimerOn: Bool = false
+    var isLiveActivityTimerOn: Bool = false
     
     func startTime() {
         self.isTimerOn = true

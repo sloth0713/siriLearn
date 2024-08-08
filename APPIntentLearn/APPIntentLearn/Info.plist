@@ -4,10 +4,11 @@
 <dict>
 	<key>NSSupportsLiveActivities</key>
 	<true/>
-	<key>NSExtension</key>
-	<dict>
-		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.widgetkit-extension</string>
-	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>external-accessory</string>
+		<string>nearby-interaction</string>
+	</array>
 </dict>
 </plist>
