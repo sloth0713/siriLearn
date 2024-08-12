@@ -23,12 +23,12 @@ struct EntAppIntent: AppIntent {
     
     static var title: LocalizedStringResource { "Ent App Intent" }
 
-    @Parameter(title: "Book Name")
-    var Book: BookEntity
+    @Parameter(title: "Photo Name")
+    var Photo: PhotoEntity
 
     func perform() async throws -> some IntentResult {
         print("fdsaf")
-        print(Book.model.name)
+        print(Photo.model.name)
         return .result()
     }
 }

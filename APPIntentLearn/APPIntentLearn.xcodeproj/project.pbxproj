@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2BB7831E2C69DC7300375FFC /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7831D2C69DC6100375FFC /* BookManager.swift */; };
+		2BB7831E2C69DC7300375FFC /* PhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7831D2C69DC6100375FFC /* PhotoManager.swift */; };
 		2BBCCFBC2C635285004EB8C9 /* APPIntentLearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCCFBB2C635285004EB8C9 /* APPIntentLearnApp.swift */; };
 		2BBCCFBE2C635285004EB8C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCCFBD2C635285004EB8C9 /* ContentView.swift */; };
 		2BBCCFC02C635287004EB8C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BBCCFBF2C635287004EB8C9 /* Assets.xcassets */; };
@@ -39,7 +39,7 @@
 		2BBCD01A2C6392E2004EB8C9 /* LiveActivitiyIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0192C6392D8004EB8C9 /* LiveActivitiyIntents.swift */; };
 		2BBCD01B2C6392E2004EB8C9 /* LiveActivitiyIntents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD0192C6392D8004EB8C9 /* LiveActivitiyIntents.swift */; };
 		2BBCD0212C6399CE004EB8C9 /* TimerLiveActivityControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD00E2C636D42004EB8C9 /* TimerLiveActivityControl.swift */; };
-		2BBCDC022C661E66004EB8C9 /* BookEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCDC012C661E65004EB8C9 /* BookEntity.swift */; };
+		2BBCDC022C661E66004EB8C9 /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCDC012C661E65004EB8C9 /* PhotoEntity.swift */; };
 		2BBCDC042C661E6F004EB8C9 /* EntAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCDC032C661E6D004EB8C9 /* EntAppIntent.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,7 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2BB7831D2C69DC6100375FFC /* BookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManager.swift; sourceTree = "<group>"; };
+		2BB7831D2C69DC6100375FFC /* PhotoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManager.swift; sourceTree = "<group>"; };
 		2BBCCFB82C635285004EB8C9 /* APPIntentLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPIntentLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBCCFBB2C635285004EB8C9 /* APPIntentLearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPIntentLearnApp.swift; sourceTree = "<group>"; };
 		2BBCCFBD2C635285004EB8C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		2BBCD0192C6392D8004EB8C9 /* LiveActivitiyIntents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveActivitiyIntents.swift; sourceTree = "<group>"; };
 		2BBCD01F2C63975F004EB8C9 /* APPIntentLearn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = APPIntentLearn.entitlements; sourceTree = "<group>"; };
 		2BBCD0202C639890004EB8C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		2BBCDC012C661E65004EB8C9 /* BookEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEntity.swift; sourceTree = "<group>"; };
+		2BBCDC012C661E65004EB8C9 /* PhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
 		2BBCDC032C661E6D004EB8C9 /* EntAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntAppIntent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -257,9 +257,9 @@
 		2BBCDC002C661E59004EB8C9 /* AppIntentEntity */ = {
 			isa = PBXGroup;
 			children = (
-				2BB7831D2C69DC6100375FFC /* BookManager.swift */,
+				2BB7831D2C69DC6100375FFC /* PhotoManager.swift */,
 				2BBCDC032C661E6D004EB8C9 /* EntAppIntent.swift */,
-				2BBCDC012C661E65004EB8C9 /* BookEntity.swift */,
+				2BBCDC012C661E65004EB8C9 /* PhotoEntity.swift */,
 			);
 			path = AppIntentEntity;
 			sourceTree = "<group>";
@@ -428,10 +428,10 @@
 				2BBCD01B2C6392E2004EB8C9 /* LiveActivitiyIntents.swift in Sources */,
 				2BBCD0152C638FF0004EB8C9 /* AppDelegate.swift in Sources */,
 				2BBCD0082C635C59004EB8C9 /* ShareManager.swift in Sources */,
-				2BBCDC022C661E66004EB8C9 /* BookEntity.swift in Sources */,
+				2BBCDC022C661E66004EB8C9 /* PhotoEntity.swift in Sources */,
 				2BBCDC042C661E6F004EB8C9 /* EntAppIntent.swift in Sources */,
 				2BBCD0172C63923F004EB8C9 /* ShareTimerLiveActivity.swift in Sources */,
-				2BB7831E2C69DC7300375FFC /* BookManager.swift in Sources */,
+				2BB7831E2C69DC7300375FFC /* PhotoManager.swift in Sources */,
 				2BBCD00B2C63612D004EB8C9 /* OpenAppWidgetControl.swift in Sources */,
 				2BBCD0132C637252004EB8C9 /* TimerLiveActivity.swift in Sources */,
 				2BBCD0212C6399CE004EB8C9 /* TimerLiveActivityControl.swift in Sources */,
