@@ -307,16 +307,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A47F7B7C-A97A-45C3-A8E3-CBB595F5D722"
+            uuid = "626A258A-2CF4-4348-A2D4-1444F087063E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "APPIntentLearn/AppIntentEntity/EntAppIntent.swift"
+            filePath = "APPIntentLearn/AppIntentEntity/BookEntity.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "perform()"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "entities(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B8383B63-E646-46FA-B22E-D84EA4D2C6D8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "APPIntentLearn/AppIntentEntity/BookManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "findBookWithName(name:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BB7831E2C69DC7300375FFC /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7831D2C69DC6100375FFC /* BookManager.swift */; };
 		2BBCCFBC2C635285004EB8C9 /* APPIntentLearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCCFBB2C635285004EB8C9 /* APPIntentLearnApp.swift */; };
 		2BBCCFBE2C635285004EB8C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCCFBD2C635285004EB8C9 /* ContentView.swift */; };
 		2BBCCFC02C635287004EB8C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BBCCFBF2C635287004EB8C9 /* Assets.xcassets */; };
@@ -81,6 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2BB7831D2C69DC6100375FFC /* BookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManager.swift; sourceTree = "<group>"; };
 		2BBCCFB82C635285004EB8C9 /* APPIntentLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPIntentLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBCCFBB2C635285004EB8C9 /* APPIntentLearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPIntentLearnApp.swift; sourceTree = "<group>"; };
 		2BBCCFBD2C635285004EB8C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 		2BBCDC002C661E59004EB8C9 /* AppIntentEntity */ = {
 			isa = PBXGroup;
 			children = (
+				2BB7831D2C69DC6100375FFC /* BookManager.swift */,
 				2BBCDC032C661E6D004EB8C9 /* EntAppIntent.swift */,
 				2BBCDC012C661E65004EB8C9 /* BookEntity.swift */,
 			);
@@ -428,6 +431,7 @@
 				2BBCDC022C661E66004EB8C9 /* BookEntity.swift in Sources */,
 				2BBCDC042C661E6F004EB8C9 /* EntAppIntent.swift in Sources */,
 				2BBCD0172C63923F004EB8C9 /* ShareTimerLiveActivity.swift in Sources */,
+				2BB7831E2C69DC7300375FFC /* BookManager.swift in Sources */,
 				2BBCD00B2C63612D004EB8C9 /* OpenAppWidgetControl.swift in Sources */,
 				2BBCD0132C637252004EB8C9 /* TimerLiveActivity.swift in Sources */,
 				2BBCD0212C6399CE004EB8C9 /* TimerLiveActivityControl.swift in Sources */,
