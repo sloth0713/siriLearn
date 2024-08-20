@@ -18,10 +18,10 @@ class ShareManager {
     
     func startTime() {
         self.isTimerOn = true
-        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { timer in
-            self.isTimerOn = false
-            ControlCenter.shared.reloadAllControls()
-        }
+//        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { timer in
+//            self.isTimerOn = false
+//            ControlCenter.shared.reloadAllControls()
+//        }
     }
     
 }
