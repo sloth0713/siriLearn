@@ -62,7 +62,7 @@ struct selectBookQuery: EntityQuery {
     }
 }
 
-class BookModel {
+class BookModel : Sendable {
     var name: String
     var author: String
     
