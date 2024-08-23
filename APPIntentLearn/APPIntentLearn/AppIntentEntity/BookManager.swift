@@ -11,9 +11,10 @@ class BookManager{
     var Books:[BookModel] = []
     
     init() {
-        for i in 1...20{
+        for i in 1...3{
             self.Books.append(BookModel(name: "name \(i)", author: "author \(i)"))
         }
+        
     }
     
     func findBookWithName(name:String) -> BookModel{
