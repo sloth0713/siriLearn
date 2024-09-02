@@ -20,13 +20,13 @@ struct BookAppIntent: AppIntent {
         
         return .result(
             value: Book,//ReturnsValue<BookEntity>
-            opensIntent: NextBookIntent(paramsBook: $Book),//OpensIntent
+            opensIntent: BuyBookIntent(paramsBook: $Book),//OpensIntent
             dialog: IntentDialog("")
         )
     }
 }
 
-struct NextBookIntent: AppIntent {
+struct BuyBookIntent: AppIntent {
     
 //    intent连接的intent,需要两个intent都配置ProvidesDialog & ShowsSnippetView，内容是第二个intent的
     @Parameter(title: "paramsBook")
@@ -42,20 +42,20 @@ struct NextBookIntent: AppIntent {
             dialog: IntentDialog("selected book :\(paramsBook.model.name) ,author\(paramsBook.model.author)")
         )
         {
-            ShortcutInsightsView(name: paramsBook.model.name)
+            ShortcutInsightsView(model: paramsBook.model)
         }
     }
 }
 
 struct ShortcutInsightsView: View {
 
-    let name: String
+    let model: BookModel
     
     var body: some View {
         VStack(spacing: 2) {
-            Text("This is your book \(name)")
+            Text("This is your book \(model.name)")
                 .font(.system(size: 17, weight: .medium, design: .rounded))
-            Image(uiImage: UIImage(named: "xiyouji")!)
+            Image(uiImage: UIImage(named: model.imageName)!)
         }
         .padding(20)
     }

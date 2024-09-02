@@ -11,7 +11,6 @@ struct SchemaOpenAssetIntent: OpenIntent {
     
     //用户选择后自动赋值
     var target: schemaPhotoEntity
-    typealias Value = schemaPhotoEntity
 
     @MainActor
     func perform() async throws -> some IntentResult {

@@ -55,13 +55,9 @@ extension schemaPhotoEntity {
         @MainActor
         //schemaPhotoEntity.ID为用户选中id
         func entities(for identifiers: [String]) async throws -> [schemaPhotoEntity] {
-//            library.assets(for: identifiers).map(\.entity)
             
             var schemaPhotos: [schemaPhotoEntity] = []
             _ = identifiers.compactMap { photoName in
-                
-//                var model:schemaPhotoModel = SchemaIntentManager.share.findPhotoWithName(name: photoName)
-//                schemaPhotoEntity(id: photoName, asset: photoName)
                 schemaPhotos.append(schemaPhotoEntity(id: photoName, asset: photoName))
             }
             //用户选中的字符串，组装成entities，返回给intent

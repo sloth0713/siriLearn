@@ -196,12 +196,12 @@
 		2BBCCFBA2C635285004EB8C9 /* APPIntentLearn */ = {
 			isa = PBXGroup;
 			children = (
+				2BBCCFBB2C635285004EB8C9 /* APPIntentLearnApp.swift */,
 				2B1FED102C748B4900325C8C /* MyShortcutsProvider.swift */,
 				2BBCDC002C661E59004EB8C9 /* AppIntentEntity */,
 				2BBCD0202C639890004EB8C9 /* Info.plist */,
 				2BBCD01F2C63975F004EB8C9 /* APPIntentLearn.entitlements */,
 				2BBCD0142C638FE3004EB8C9 /* AppDelegate.swift */,
-				2BBCCFBB2C635285004EB8C9 /* APPIntentLearnApp.swift */,
 				2BBCCFBD2C635285004EB8C9 /* ContentView.swift */,
 				2BBCCFBF2C635287004EB8C9 /* Assets.xcassets */,
 				2BBCCFC12C635287004EB8C9 /* Preview Content */,
