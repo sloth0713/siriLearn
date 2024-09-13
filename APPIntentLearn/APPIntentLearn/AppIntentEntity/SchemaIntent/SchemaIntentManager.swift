@@ -5,27 +5,39 @@
 //  Created by ByteDance on 2024/8/20.
 //
 
+import Foundation
+
 class SchemaIntentManager{
     static let share = SchemaIntentManager()
     
     var SchemaPhotos:[schemaPhotoModel] = [
-        schemaPhotoModel(name: "schemaName1", author: "schemaAuthor1"),
-        schemaPhotoModel(name: "schemaName2", author: "schemaAuthor2"),
-        schemaPhotoModel(name: "schemaName3", author: "schemaAuthor3"),
+        schemaPhotoModel(name: "apple", author: "author_apple",asset: "apple"),
+        schemaPhotoModel(name: "orange", author: "author_orange",asset: "orange"),
+        schemaPhotoModel(name: "banana", author: "author_banana",asset: "banana"),
     ]
     
-    func findPhotoWithName(name:String) -> schemaPhotoModel{
-        var findModel : schemaPhotoModel = schemaPhotoModel(name: "unknown", author: "unknown")
+    func findPhotoWithName(id:UUID) -> schemaPhotoModel{
+        var findModel : schemaPhotoModel = schemaPhotoModel(name: "unknown", author: "unknown",asset: "unknown")
         for model:schemaPhotoModel in SchemaIntentManager.share.SchemaPhotos{
-            if (model.name == name){
+            if (model.id == id){
                 findModel = model
             }
         }
         return findModel
     }
     
-    func schemaPhotoNames() -> [String]{
-        return ["schemaName1","schemaName2","schemaName3"]
-    }
+}
+
+class schemaPhotoModel{
+    var name: String
+    var author: String
+    var asset: String
+    var id:UUID
     
+    init(name: String, author: String, asset: String) {
+        self.id = UUID()
+        self.asset = asset
+        self.name = name
+        self.author = author
+    }
 }

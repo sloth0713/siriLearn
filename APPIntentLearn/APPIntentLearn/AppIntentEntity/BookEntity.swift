@@ -7,9 +7,23 @@
 
 import AppIntents
 import Foundation
+import CoreSpotlight
+import SwiftUI
 
-struct BookEntity: AppEntity, Identifiable {//单个选项
+struct BookEntity: AppEntity, IndexedEntity, Identifiable {//单个选项
     
+//    var attributeSet:CSSearchableItemAttributeSet {
+//        let attributed = CSSearchableItemAttributeSet(itemContentType: "Text")
+//        attributed.displayName = "jjj \(model.author)"
+//        return attributed
+//    }
+
+//    var attributeSet: CSSearchableItemAttributeSet{
+//        let attributes = CSSearchableItemAttributeSet()
+//        attributes.displayName = "jjj \(model.author)"
+//        attributes.contentDescription = "jjj contentDescription \(model.author)"
+//        return attributes
+//      }
     
     var model: BookModel
     var id: UUID
@@ -18,10 +32,21 @@ struct BookEntity: AppEntity, Identifiable {//单个选项
     static var typeDisplayRepresentation: TypeDisplayRepresentation = "Book Asset"
     
     var displayRepresentation: DisplayRepresentation {
-        DisplayRepresentation(title: "\(model.name)",
-                              subtitle: "\(model.author)",
-                              image: DisplayRepresentation.Image(named: model.imageName))
+        
+        if (ABManager.share.useOnlineIntentIcon){
+            let image = UIImage(contentsOfFile: model.imageUrl.path)!
+            let data:Data = image.pngData()!
+            
+            return DisplayRepresentation(title: "\(model.name)",
+                                         subtitle: "\(model.author)",
+                                         image: DisplayRepresentation.Image(data: data))//appintent
+        }else{
+            return DisplayRepresentation(title: "\(model.name)",
+                                         subtitle: "\(model.author)",
+                                          image: DisplayRepresentation.Image(named: model.imageName))
+        }
     }
+    
 }
 
 struct selectBookQuery: EntityQuery {
@@ -55,6 +80,9 @@ struct selectBookQuery: EntityQuery {
     func suggestedEntities() async throws -> [BookEntity] {
         
         var entities:[BookEntity] = []
+        if (ABManager.share.disableIntent) {
+            return entities
+        }
         for model:BookModel in BookManager.share.Books{
             entities.append(BookEntity(model: model, id: model.id))
         }
@@ -83,11 +111,13 @@ struct BookModel : Identifiable, Hashable, Sendable {
     var name: String
     var author: String
     var imageName: String
+    var imageUrl: URL
     
-    init(name: String, author: String,imageName:String) {
+    init(name: String, author: String,imageName:String,imageUrl:URL) {
         self.id = UUID()
         self.name = name
         self.author = author
         self.imageName = imageName
+        self.imageUrl = imageUrl
     }
 }

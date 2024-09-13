@@ -9,11 +9,22 @@ import AppIntents
 class EntAppIntentShortcuts: AppShortcutsProvider {
     static var appShortcuts : [AppShortcut] {
         
-        AppShortcut(intent: SchemaOpenAssetIntent(),
-                    phrases: ["Schema Open Asset Intent \(.applicationName)"],
-                    shortTitle: "Schema Open Asset Intent",
-                    systemImageName: "photo")
-        
+//        AppShortcut(intent: SchemaOpenAssetIntent(),
+//                    phrases: ["Schema Open Asset Intent \(.applicationName)"],
+//                    shortTitle: "Schema Open Asset Intent",
+//                    systemImageName: "photo")
+  
+        //普通Shortcut
+//        AppShortcut(
+//            intent: BookAppIntent(),
+//            phrases: [
+//                "Get \(\.$Book) with \(.applicationName)"
+////                "Get with \(.applicationName)"
+//            ],
+//            shortTitle:  "Book App Intent",
+//            systemImageName: "book")
+//        
+        //带多个intent的Shortcut
         AppShortcut(
             intent: BookAppIntent(),
             phrases: [
@@ -29,6 +40,5 @@ class EntAppIntentShortcuts: AppShortcutsProvider {
                     OptionsCollection(selectBookQuery(), title: "Favorite books", systemImageName: "book")
                 }
             ))
-    
     }
 }

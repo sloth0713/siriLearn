@@ -28,10 +28,9 @@ struct schemaPhotoEntity: IndexedEntity {
 
     static let defaultQuery = schemaPhotoQuery()
 
-    // MARK: Properties
-
-    let id: String
-    let asset: String
+    var model:schemaPhotoModel
+    var id: UUID
+    var asset: String?
 
     @Property(title: "Title")
     var title: String?
@@ -42,9 +41,18 @@ struct schemaPhotoEntity: IndexedEntity {
     var isFavorite: Bool
     var isHidden: Bool
     var hasSuggestedEdits: Bool
-
+    
+    init(model: schemaPhotoModel) {
+        self.model = model
+        self.id = model.id
+        self.asset = model.asset
+        self.title = model.name
+    }
+    
     var displayRepresentation: DisplayRepresentation {
-        DisplayRepresentation(stringLiteral: asset)
+        DisplayRepresentation(title: "\(model.name)",
+                              subtitle: "\(model.author)",
+                              image: DisplayRepresentation.Image(named: model.asset))
     }
 }
 
@@ -54,11 +62,12 @@ extension schemaPhotoEntity {
 
         @MainActor
         //schemaPhotoEntity.ID为用户选中id
-        func entities(for identifiers: [String]) async throws -> [schemaPhotoEntity] {
+        func entities(for identifiers: [UUID]) async throws -> [schemaPhotoEntity] {
             
             var schemaPhotos: [schemaPhotoEntity] = []
-            _ = identifiers.compactMap { photoName in
-                schemaPhotos.append(schemaPhotoEntity(id: photoName, asset: photoName))
+            _ = identifiers.compactMap { id in
+                let model:schemaPhotoModel = SchemaIntentManager.share.findPhotoWithName(id: id)
+                schemaPhotos.append(schemaPhotoEntity(model: model))
             }
             //用户选中的字符串，组装成entities，返回给intent
             return schemaPhotos
@@ -68,10 +77,9 @@ extension schemaPhotoEntity {
         @MainActor
         func suggestedEntities() async throws -> [schemaPhotoEntity] {
             
-            
             var entities:[schemaPhotoEntity] = []
-            for schemaName:String in SchemaIntentManager.share.schemaPhotoNames(){
-                entities.append(schemaPhotoEntity(id: schemaName, asset: schemaName))
+            for model:schemaPhotoModel in SchemaIntentManager.share.SchemaPhotos {
+                entities.append(schemaPhotoEntity(model: model))
             }
             return entities
         }
@@ -82,16 +90,5 @@ extension schemaPhotoEntity {
 //            try await entity.asset.pngData()
 //        }
 //    }
-}
-
-
-class schemaPhotoModel {
-    var name: String
-    var author: String
-    
-    init(name: String, author: String) {
-        self.name = name
-        self.author = author
-    }
 }
 

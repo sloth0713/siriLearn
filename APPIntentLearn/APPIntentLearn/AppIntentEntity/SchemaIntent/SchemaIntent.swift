@@ -10,12 +10,16 @@ import AppIntents
 struct SchemaOpenAssetIntent: OpenIntent {
     
     //用户选择后自动赋值
-    var target: schemaPhotoEntity
+    var target : schemaPhotoEntity
 
     @MainActor
-    func perform() async throws -> some IntentResult {
-        print("name : \(target.asset), author : \(target.asset)")
-        return .result()
+    func perform() async throws -> some IntentResult & ProvidesDialog & ShowsSnippetView {
+        print("name : \(target.model.name), author : \(target.model.author)")
+        return .result(
+            dialog: IntentDialog(stringLiteral: "name : \(target.model.name), author : \(target.model.author)")
+        ){
+            ShortcutInsightsView(name: target.model.name, image: target.model.asset)
+        }
     }
 }
 

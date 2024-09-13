@@ -13,20 +13,31 @@ class BookManager{
     static let share = BookManager()
     
     var Books:[BookModel] = []
+    var imageLoaclUrl:[URL] = []
     
     init() {
-//        for i in 1...3{
-//            self.Books.append(BookModel(name: "name \(i)", author: "author \(i)"))
-//        }
-        self.Books.append(BookModel(name: "xiyouji", author: "author_xiyouji",imageName: "xiyouji"))
-        self.Books.append(BookModel(name: "hongloumeng", author: "author_hongloumeng",imageName: "hongloumeng"))
-        self.Books.append(BookModel(name: "sanguoyanyi", author: "author_sanguoyanyi",imageName: "sanguoyanyi"))
-        self.Books.append(BookModel(name: "shuihuzhuan", author: "author_shuihuzhuan",imageName: "shuihuzhuan"))
-        
+//        self.Books.append(BookModel(name: "xiyouji", author: "author_xiyouji",imageName: "xiyouji"))
+//        self.Books.append(BookModel(name: "hongloumeng", author: "author_hongloumeng",imageName: "hongloumeng"))
+//        self.Books.append(BookModel(name: "sanguoyanyi", author: "author_sanguoyanyi",imageName: "sanguoyanyi"))
+//        self.Books.append(BookModel(name: "shuihuzhuan", author: "author_shuihuzhuan",imageName: "shuihuzhuan"))
+        if (!ABManager.share.useOnlineIntentIcon){
+            let nameArray:[String] = ["xiyouji","hongloumeng","sanguoyanyi","shuihuzhuan"]
+            for bookName in nameArray{
+                self.Books.append(BookModel(name: bookName, author: "author_\(bookName)",imageName: bookName,imageUrl:URL(filePath: "fdas")!))
+            }
+        }else{
+            self.Books = []
+        }
+        self.imageLoaclUrl = []
+    }
+    
+    func appendImageUrl(bookName:String,imageUrl:URL) ->Void{
+        self.Books.append(BookModel(name: bookName, author: "author_\(bookName)",imageName: bookName,imageUrl: imageUrl))
+        self.imageLoaclUrl.append(imageUrl)
     }
     
     func findBookWithId(id:UUID) -> BookModel{
-        var findModel : BookModel = BookModel(name: "unknown", author: "unknown", imageName: "unknown")
+        var findModel : BookModel = BookModel(name: "unknown", author: "unknown", imageName: "unknown",imageUrl:URL(filePath: "fdas")!)
         for model:BookModel in BookManager.share.Books{
             if (model.id == id){
                 findModel = model
