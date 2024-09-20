@@ -34,16 +34,27 @@ struct BookEntity: AppEntity, IndexedEntity, Identifiable {//单个选项
     var displayRepresentation: DisplayRepresentation {
         
         if (ABManager.share.useOnlineIntentIcon){
-            let image = UIImage(contentsOfFile: model.imageUrl.path)!
-            let data:Data = image.pngData()!
+            if (model.type == .EntityTypeBusiness){
+                let image = UIImage(contentsOfFile: model.imageUrl.path)!
+                let data:Data = image.pngData()!
+                
+                return DisplayRepresentation(title: "\(model.name)",
+                                             subtitle: "\(model.author)",
+                                             image: DisplayRepresentation.Image(data: data))//appintent
+            }else{
+                return DisplayRepresentation(title: "\(model.name)",
+                                             image: DisplayRepresentation.Image(systemName: model.imageName))
+            }
             
-            return DisplayRepresentation(title: "\(model.name)",
-                                         subtitle: "\(model.author)",
-                                         image: DisplayRepresentation.Image(data: data))//appintent
         }else{
-            return DisplayRepresentation(title: "\(model.name)",
-                                         subtitle: "\(model.author)",
-                                          image: DisplayRepresentation.Image(named: model.imageName))
+            if (model.type == .EntityTypeBusiness){
+                return DisplayRepresentation(title: "\(model.name)",
+                                             subtitle: "\(model.author)",
+                                              image: DisplayRepresentation.Image(named: model.imageName))
+            }else{
+                return DisplayRepresentation(title: "\(model.name)",
+                                             image: DisplayRepresentation.Image(systemName: model.imageName))
+            }
         }
     }
     
@@ -84,7 +95,18 @@ struct selectBookQuery: EntityQuery {
             return entities
         }
         for model:BookModel in BookManager.share.Books{
-            entities.append(BookEntity(model: model, id: model.id))
+            if (model.type == .EntityTypeBusiness){
+                if (ABManager.share.enableBookBusinessIntent){
+                    entities.append(BookEntity(model: model, id: model.id))
+                }
+            }
+            
+            if (model.type == .EntityTypeGeneral){
+                if (ABManager.share.enableBookGeneralIntent){
+                    entities.append(BookEntity(model: model, id: model.id))
+                }
+            }
+            
         }
         //展示所有的选择
         return entities
@@ -102,22 +124,5 @@ extension selectBookQuery: EntityStringQuery {
             Books.append(BookEntity(model:bookModel,id: bookModel.id))
         }
         return Books
-    }
-}
-
-struct BookModel : Identifiable, Hashable, Sendable {
-    var id: UUID
-    
-    var name: String
-    var author: String
-    var imageName: String
-    var imageUrl: URL
-    
-    init(name: String, author: String,imageName:String,imageUrl:URL) {
-        self.id = UUID()
-        self.name = name
-        self.author = author
-        self.imageName = imageName
-        self.imageUrl = imageUrl
     }
 }

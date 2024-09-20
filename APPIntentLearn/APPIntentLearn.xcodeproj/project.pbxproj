@@ -12,6 +12,12 @@
 		2B0082582C9D23AD00D85E32 /* objcTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0082562C9D23AD00D85E32 /* objcTask.m */; };
 		2B1FED0F2C74824700325C8C /* SchemaIntentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FED0E2C74823E00325C8C /* SchemaIntentManager.swift */; };
 		2B1FED112C748B5900325C8C /* MyShortcutsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FED102C748B4900325C8C /* MyShortcutsProvider.swift */; };
+		2B93AA252C9D257D006886CA /* InboxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA242C9D2578006886CA /* InboxManager.swift */; };
+		2B93AA272C9D2589006886CA /* InboxAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA262C9D2581006886CA /* InboxAppIntent.swift */; };
+		2B93AA292C9D2592006886CA /* InboxEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA282C9D258D006886CA /* InboxEntity.swift */; };
+		2B93AA2B2C9D2843006886CA /* InboxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA2A2C9D283C006886CA /* InboxModel.swift */; };
+		2B93AA2D2C9D454B006886CA /* EntityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA2C2C9D453C006886CA /* EntityType.swift */; };
+		2B93AA302C9D4B90006886CA /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA2F2C9D4B8B006886CA /* BookModel.swift */; };
 		2BB7831E2C69DC7300375FFC /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7831D2C69DC6100375FFC /* BookManager.swift */; };
 		2BB783212C69E28800375FFC /* SchemaIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB783202C69E28100375FFC /* SchemaIntent.swift */; };
 		2BB783232C69E86000375FFC /* SchemaPhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB783222C69E85700375FFC /* SchemaPhotoEntity.swift */; };
@@ -96,6 +102,12 @@
 		2B0082562C9D23AD00D85E32 /* objcTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcTask.m; sourceTree = "<group>"; };
 		2B1FED0E2C74823E00325C8C /* SchemaIntentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaIntentManager.swift; sourceTree = "<group>"; };
 		2B1FED102C748B4900325C8C /* MyShortcutsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShortcutsProvider.swift; sourceTree = "<group>"; };
+		2B93AA242C9D2578006886CA /* InboxManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxManager.swift; sourceTree = "<group>"; };
+		2B93AA262C9D2581006886CA /* InboxAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxAppIntent.swift; sourceTree = "<group>"; };
+		2B93AA282C9D258D006886CA /* InboxEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxEntity.swift; sourceTree = "<group>"; };
+		2B93AA2A2C9D283C006886CA /* InboxModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxModel.swift; sourceTree = "<group>"; };
+		2B93AA2C2C9D453C006886CA /* EntityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityType.swift; sourceTree = "<group>"; };
+		2B93AA2F2C9D4B8B006886CA /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		2BB7831D2C69DC6100375FFC /* BookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManager.swift; sourceTree = "<group>"; };
 		2BB783202C69E28100375FFC /* SchemaIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaIntent.swift; sourceTree = "<group>"; };
 		2BB783222C69E85700375FFC /* SchemaPhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaPhotoEntity.swift; sourceTree = "<group>"; };
@@ -168,6 +180,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B93AA232C9D2567006886CA /* Inbox */ = {
+			isa = PBXGroup;
+			children = (
+				2B93AA2A2C9D283C006886CA /* InboxModel.swift */,
+				2B93AA282C9D258D006886CA /* InboxEntity.swift */,
+				2B93AA262C9D2581006886CA /* InboxAppIntent.swift */,
+				2B93AA242C9D2578006886CA /* InboxManager.swift */,
+			);
+			path = Inbox;
+			sourceTree = "<group>";
+		};
+		2B93AA2E2C9D4B73006886CA /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				2B93AA2F2C9D4B8B006886CA /* BookModel.swift */,
+				2BB7831D2C69DC6100375FFC /* BookManager.swift */,
+				2BBCDC032C661E6D004EB8C9 /* BookAppIntent.swift */,
+				2BBCDC012C661E65004EB8C9 /* BookEntity.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
 		2BB7831F2C69E26300375FFC /* SchemaIntent */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,10 +323,10 @@
 		2BBCDC002C661E59004EB8C9 /* AppIntentEntity */ = {
 			isa = PBXGroup;
 			children = (
+				2B93AA2C2C9D453C006886CA /* EntityType.swift */,
+				2B93AA2E2C9D4B73006886CA /* Book */,
+				2B93AA232C9D2567006886CA /* Inbox */,
 				2BB7831F2C69E26300375FFC /* SchemaIntent */,
-				2BB7831D2C69DC6100375FFC /* BookManager.swift */,
-				2BBCDC032C661E6D004EB8C9 /* BookAppIntent.swift */,
-				2BBCDC012C661E65004EB8C9 /* BookEntity.swift */,
 			);
 			path = AppIntentEntity;
 			sourceTree = "<group>";
@@ -459,19 +493,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BB783232C69E86000375FFC /* SchemaPhotoEntity.swift in Sources */,
+				2B93AA292C9D2592006886CA /* InboxEntity.swift in Sources */,
 				2B0082522C9D236900D85E32 /* test.swift in Sources */,
 				2BBCD01B2C6392E2004EB8C9 /* LiveActivitiyIntents.swift in Sources */,
 				2BBCD0152C638FF0004EB8C9 /* AppDelegate.swift in Sources */,
+				2B93AA302C9D4B90006886CA /* BookModel.swift in Sources */,
+				2B93AA2B2C9D2843006886CA /* InboxModel.swift in Sources */,
 				2BBCD0082C635C59004EB8C9 /* ShareManager.swift in Sources */,
 				2B1FED112C748B5900325C8C /* MyShortcutsProvider.swift in Sources */,
 				2BBCDC022C661E66004EB8C9 /* BookEntity.swift in Sources */,
 				2BBCDC042C661E6F004EB8C9 /* BookAppIntent.swift in Sources */,
+				2B93AA252C9D257D006886CA /* InboxManager.swift in Sources */,
 				2BBCD0172C63923F004EB8C9 /* ShareTimerLiveActivity.swift in Sources */,
 				2BB7831E2C69DC7300375FFC /* BookManager.swift in Sources */,
 				2BBCD00B2C63612D004EB8C9 /* OpenAppWidgetControl.swift in Sources */,
 				2B1FED0F2C74824700325C8C /* SchemaIntentManager.swift in Sources */,
 				2BBCD0132C637252004EB8C9 /* TimerLiveActivity.swift in Sources */,
+				2B93AA272C9D2589006886CA /* InboxAppIntent.swift in Sources */,
 				2BBCD0212C6399CE004EB8C9 /* TimerLiveActivityControl.swift in Sources */,
+				2B93AA2D2C9D454B006886CA /* EntityType.swift in Sources */,
 				2B0082572C9D23AD00D85E32 /* ABManager.swift in Sources */,
 				2B0082582C9D23AD00D85E32 /* objcTask.m in Sources */,
 				2BB783212C69E28800375FFC /* SchemaIntent.swift in Sources */,

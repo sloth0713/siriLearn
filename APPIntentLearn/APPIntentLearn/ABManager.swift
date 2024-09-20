@@ -12,10 +12,19 @@ import Foundation
     
     var useOnlineIntentIcon:Bool
     var disableIntent:Bool
+    var enableBookBusinessIntent:Bool
+    var enableBookGeneralIntent:Bool
+    
+    var enableInboxBusinessIntent:Bool
+    var enableInboxGeneralIntent:Bool
     
     override init(){
-        self.useOnlineIntentIcon = true
+        self.useOnlineIntentIcon = false
         self.disableIntent = false
+        self.enableBookBusinessIntent = false
+        self.enableBookGeneralIntent = true
+        self.enableInboxBusinessIntent = true
+        self.enableInboxGeneralIntent = false
     }
     
 }

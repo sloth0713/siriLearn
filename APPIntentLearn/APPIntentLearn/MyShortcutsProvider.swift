@@ -25,6 +25,7 @@ class EntAppIntentShortcuts: AppShortcutsProvider {
 //            systemImageName: "book")
 //        
         //带多个intent的Shortcut
+        
         AppShortcut(
             intent: BookAppIntent(),
             phrases: [
@@ -38,6 +39,21 @@ class EntAppIntentShortcuts: AppShortcutsProvider {
                 summary: Summary("Get \(\.$Book)"),
                 optionsCollections: {
                     OptionsCollection(selectBookQuery(), title: "Favorite books", systemImageName: "book")
+                }
+            ))
+        
+        AppShortcut(
+            intent: InboxAppIntent(),
+            phrases: [
+                "Get \(\.$inboxEntity) with \(.applicationName)"
+            ],
+            shortTitle:  "Inbox App Intent",//
+            systemImageName: "book",
+            parameterPresentation: ParameterPresentation(
+                for: \.$inboxEntity,
+                summary: Summary("Get \(\.$inboxEntity)"),
+                optionsCollections: {
+                    OptionsCollection(selectInboxQuery(), title: "Favorite friends", systemImageName: "bag.fill")
                 }
             ))
     }
