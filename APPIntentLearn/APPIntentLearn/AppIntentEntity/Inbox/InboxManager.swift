@@ -22,14 +22,13 @@ class InboxManager{
         self.inboxModels.append(InboxModel(name: "all your friends",imageName:"fan",type: .EntityTypeGeneral))
     }
     
-    func findPeopleWithId(id:UUID) -> InboxModel{
-        var findModel : InboxModel = InboxModel(name: "unknown",imageName:"fan",type: .EntityTypeBusiness)
+    func findPeopleWithId(id:UUID) -> InboxModel?{
         for model:InboxModel in InboxManager.share.inboxModels{
             if (model.id == id){
-                findModel = model
+                return model
             }
         }
-        return findModel
+        return nil
     }
     
     func matchBookWithName(name:String) -> [BookModel]{

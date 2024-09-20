@@ -11,7 +11,7 @@ struct InboxAppIntent:AppIntent{
     static var title: LocalizedStringResource{"InboxAppIntent"}
     
     //用户选择后自动赋值
-    @Parameter(title: "People")
+    @Parameter(title: "People want to chat")
     var inboxEntity: InboxEntity
     
     func perform() async throws -> some IntentResult {

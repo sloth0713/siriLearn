@@ -4,7 +4,6 @@
 //
 //  Created by ByteDance on 2024/9/20.
 //
-
 import AppIntents
 
 struct InboxEntity: AppEntity, IndexedEntity, Identifiable {
@@ -31,8 +30,9 @@ struct selectInboxQuery: EntityQuery {
     func entities(for identifiers: [UUID]) async throws -> [InboxEntity] {
         var inboxEntities: [InboxEntity] = []
         _ = identifiers.compactMap { ID in
-            let model:InboxModel = InboxManager.share.findPeopleWithId(id: ID)
-            inboxEntities.append(InboxEntity(model:model,id: model.id))
+            if let model = InboxManager.share.findPeopleWithId(id: ID){
+                inboxEntities.append(InboxEntity(model:model,id: model.id))
+            }
         }
         
         return inboxEntities
