@@ -24,9 +24,7 @@ struct InboxEntity: AppEntity, IndexedEntity, Identifiable {
             return DisplayRepresentation(title: "\(model.name)",
                                          image: DisplayRepresentation.Image(systemName: model.imageName))
         }
-        
     }
-    
 }
 
 struct selectInboxQuery: EntityQuery {

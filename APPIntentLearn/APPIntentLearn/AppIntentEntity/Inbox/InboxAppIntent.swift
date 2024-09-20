@@ -15,7 +15,7 @@ struct InboxAppIntent:AppIntent{
     var inboxEntity: InboxEntity
     
     func perform() async throws -> some IntentResult {
-        print("inbox with")
+        print("inbox with \(inboxEntity.model.name)")
         return .result()
     }
     

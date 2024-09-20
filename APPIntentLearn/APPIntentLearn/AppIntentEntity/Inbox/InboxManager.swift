@@ -19,7 +19,7 @@ class InboxManager{
         for image in imageArray{
             self.inboxModels.append(InboxModel(name: "friends_name\(image)",imageName:image,type: .EntityTypeBusiness))
         }
-        self.inboxModels.append(InboxModel(name: "inbox",imageName:"fan",type: .EntityTypeGeneral))
+        self.inboxModels.append(InboxModel(name: "all your friends",imageName:"fan",type: .EntityTypeGeneral))
     }
     
     func findPeopleWithId(id:UUID) -> InboxModel{

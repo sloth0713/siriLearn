@@ -5,6 +5,7 @@
 //  Created by ByteDance on 2024/8/12.
 //
 import AppIntents
+import SwiftUI
 
 @AssistantIntent(schema: .photos.openAsset)
 struct SchemaOpenAssetIntent: OpenIntent {
@@ -18,8 +19,20 @@ struct SchemaOpenAssetIntent: OpenIntent {
         return .result(
             dialog: IntentDialog(stringLiteral: "name : \(target.model.name), author : \(target.model.author)")
         ){
-            ShortcutInsightsView(name: target.model.name, image: target.model.asset)
+            SchemaShortcutInsightsView(model: target.model)
         }
+    }
+}
+struct SchemaShortcutInsightsView: View {
+
+    let model: schemaPhotoModel
+    
+    var body: some View {
+        VStack(spacing: 2) {
+            Text("This is your asset \(model.name)")
+            Image(uiImage: UIImage(named: model.asset)!)
+        }
+        .padding(20)
     }
 }
 

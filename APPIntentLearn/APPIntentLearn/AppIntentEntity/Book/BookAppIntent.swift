@@ -42,21 +42,24 @@ struct BuyBookIntent: AppIntent {
             dialog: IntentDialog("selected book :\(paramsBook.model.name) ,author\(paramsBook.model.author)")
         )
         {
-            ShortcutInsightsView(name: paramsBook.model.name, image: paramsBook.model.imageName)
+            ShortcutInsightsView(model: paramsBook.model)
         }
     }
 }
 
 struct ShortcutInsightsView: View {
 
-    let name: String
-    let image:String
+    let model: BookModel
     
     var body: some View {
         VStack(spacing: 2) {
-            Text("This is your asset \(name)")
+            Text("This is your asset \(model.name)")
                 .font(.system(size: 17, weight: .medium, design: .rounded))
-            Image(uiImage: UIImage(named: image)!)
+            if (model.type == .EntityTypeBusiness){
+                Image(uiImage: UIImage(named: model.imageName)!)
+            }else{
+                Image(uiImage: UIImage(systemName: model.imageName)!)
+            }
         }
         .padding(20)
     }

@@ -47,11 +47,12 @@ class EntAppIntentShortcuts: AppShortcutsProvider {
             phrases: [
                 "Get \(\.$inboxEntity) with \(.applicationName)"
             ],
+//          
             shortTitle:  "Inbox App Intent",//
             systemImageName: "book",
             parameterPresentation: ParameterPresentation(
                 for: \.$inboxEntity,
-                summary: Summary("Get \(\.$inboxEntity)"),
+                summary: Summary("Get111 \(\.$inboxEntity)"),
                 optionsCollections: {
                     OptionsCollection(selectInboxQuery(), title: "Favorite friends", systemImageName: "bag.fill")
                 }
