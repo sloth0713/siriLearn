@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B0082522C9D236900D85E32 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0082512C9D236600D85E32 /* test.swift */; };
+		2B0082572C9D23AD00D85E32 /* ABManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0082532C9D23AD00D85E32 /* ABManager.swift */; };
+		2B0082582C9D23AD00D85E32 /* objcTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0082562C9D23AD00D85E32 /* objcTask.m */; };
 		2B1FED0F2C74824700325C8C /* SchemaIntentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FED0E2C74823E00325C8C /* SchemaIntentManager.swift */; };
 		2B1FED112C748B5900325C8C /* MyShortcutsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FED102C748B4900325C8C /* MyShortcutsProvider.swift */; };
 		2BB7831E2C69DC7300375FFC /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7831D2C69DC6100375FFC /* BookManager.swift */; };
@@ -86,6 +89,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B0082512C9D236600D85E32 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		2B0082532C9D23AD00D85E32 /* ABManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ABManager.swift; sourceTree = "<group>"; };
+		2B0082542C9D23AD00D85E32 /* APPIntentLearn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APPIntentLearn-Bridging-Header.h"; sourceTree = "<group>"; };
+		2B0082552C9D23AD00D85E32 /* objcTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objcTask.h; sourceTree = "<group>"; };
+		2B0082562C9D23AD00D85E32 /* objcTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcTask.m; sourceTree = "<group>"; };
 		2B1FED0E2C74823E00325C8C /* SchemaIntentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaIntentManager.swift; sourceTree = "<group>"; };
 		2B1FED102C748B4900325C8C /* MyShortcutsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShortcutsProvider.swift; sourceTree = "<group>"; };
 		2BB7831D2C69DC6100375FFC /* BookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManager.swift; sourceTree = "<group>"; };
@@ -163,6 +171,7 @@
 		2BB7831F2C69E26300375FFC /* SchemaIntent */ = {
 			isa = PBXGroup;
 			children = (
+				2B0082512C9D236600D85E32 /* test.swift */,
 				2B1FED0E2C74823E00325C8C /* SchemaIntentManager.swift */,
 				2BB783222C69E85700375FFC /* SchemaPhotoEntity.swift */,
 				2BB783202C69E28100375FFC /* SchemaIntent.swift */,
@@ -196,6 +205,10 @@
 		2BBCCFBA2C635285004EB8C9 /* APPIntentLearn */ = {
 			isa = PBXGroup;
 			children = (
+				2B0082532C9D23AD00D85E32 /* ABManager.swift */,
+				2B0082542C9D23AD00D85E32 /* APPIntentLearn-Bridging-Header.h */,
+				2B0082552C9D23AD00D85E32 /* objcTask.h */,
+				2B0082562C9D23AD00D85E32 /* objcTask.m */,
 				2BBCCFBB2C635285004EB8C9 /* APPIntentLearnApp.swift */,
 				2B1FED102C748B4900325C8C /* MyShortcutsProvider.swift */,
 				2BBCDC002C661E59004EB8C9 /* AppIntentEntity */,
@@ -446,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BB783232C69E86000375FFC /* SchemaPhotoEntity.swift in Sources */,
+				2B0082522C9D236900D85E32 /* test.swift in Sources */,
 				2BBCD01B2C6392E2004EB8C9 /* LiveActivitiyIntents.swift in Sources */,
 				2BBCD0152C638FF0004EB8C9 /* AppDelegate.swift in Sources */,
 				2BBCD0082C635C59004EB8C9 /* ShareManager.swift in Sources */,
@@ -458,6 +472,8 @@
 				2B1FED0F2C74824700325C8C /* SchemaIntentManager.swift in Sources */,
 				2BBCD0132C637252004EB8C9 /* TimerLiveActivity.swift in Sources */,
 				2BBCD0212C6399CE004EB8C9 /* TimerLiveActivityControl.swift in Sources */,
+				2B0082572C9D23AD00D85E32 /* ABManager.swift in Sources */,
+				2B0082582C9D23AD00D85E32 /* objcTask.m in Sources */,
 				2BB783212C69E28800375FFC /* SchemaIntent.swift in Sources */,
 				2BBCCFBE2C635285004EB8C9 /* ContentView.swift in Sources */,
 				2BBCCFBC2C635285004EB8C9 /* APPIntentLearnApp.swift in Sources */,
