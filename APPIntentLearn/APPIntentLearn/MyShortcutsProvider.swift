@@ -45,7 +45,7 @@ class EntAppIntentShortcuts: AppShortcutsProvider {
         AppShortcut(
             intent: InboxAppIntent(),
             phrases: [
-                "Get \(\.$inboxEntity) with \(.applicationName)"
+                "Get \(\.$inboxEntity) with \(.applicationName)"//\(\.$inboxEntity)解析出来的是AppEntity的 displayRepresentation的title
             ],
 //          
             shortTitle:  "Inbox App Intent",//
