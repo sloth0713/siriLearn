@@ -7,6 +7,7 @@
 import AppIntents
 import SwiftUI
 
+@available(iOS 18.0, *)
 @AssistantIntent(schema: .photos.openAsset)
 struct SchemaOpenAssetIntent: OpenIntent {
     

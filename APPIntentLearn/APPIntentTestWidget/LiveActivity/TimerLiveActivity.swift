@@ -9,6 +9,7 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
+@available(iOS 18.0, *)
 struct TimerAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
         var loading: ShareTimerLiveActivity
@@ -17,6 +18,7 @@ struct TimerAttributes: ActivityAttributes {
     var start: Date = .now
 }
 
+@available(iOS 18.0, *)
 struct WidgetLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: TimerAttributes.self) { context in

@@ -11,6 +11,7 @@ import AppIntents
 import SwiftUI
 import WidgetKit
 
+@available(iOS 18.0, *)
 struct TimerLiveActivityControl: ControlWidget {
     static let kind: String = "yjx-xcdebug.APPIntentLearn.APPIntentTestWidget.TimerLiveActivityControl"
 
@@ -28,6 +29,7 @@ struct TimerLiveActivityControl: ControlWidget {
     }
 }
 
+@available(iOS 18.0, *)
 struct LiveActivityTimerIntent: SetValueIntent, LiveActivityIntent {
     static var title: LocalizedStringResource { "Live Activity timer" }
     

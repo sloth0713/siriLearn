@@ -9,6 +9,7 @@ import AppIntents
 import SwiftUI
 import WidgetKit
 
+@available(iOS 18.0, *)
 struct OpenAppWidgetControl: ControlWidget {
     static let kind: String = "yjx-xcdebug.APPIntentLearn.APPIntentTestWidget_OpenAPP"
 
@@ -23,6 +24,7 @@ struct OpenAppWidgetControl: ControlWidget {
     }
 }
 
+@available(iOS 18.0, *)
 struct OpenAPPIntent: AppIntent {
     static var title: LocalizedStringResource = "title_Yjx_ButtonWidgetOpenAPPIntent"
     static var description = IntentDescription("description_Yjx_ButtonWidgetOpenAPPIntent")

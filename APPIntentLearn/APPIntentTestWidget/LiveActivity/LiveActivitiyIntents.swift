@@ -7,6 +7,7 @@
 
 import AppIntents
 
+@available(iOS 18.0, *)
 struct StopTimerIntent: LiveActivityIntent {
     static var title: LocalizedStringResource = "Stop the timer"
     static var description = IntentDescription("Stop any currently active test timer")

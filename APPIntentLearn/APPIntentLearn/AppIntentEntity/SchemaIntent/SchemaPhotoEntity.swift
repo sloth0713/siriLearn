@@ -9,7 +9,7 @@ import AppIntents
 import CoreLocation
 import CoreTransferable
 
-
+@available(iOS 18.0, *)
 @AssistantEnum(schema: .photos.assetType)
 enum AssetType: String, AppEnum {
     case photo
@@ -21,6 +21,7 @@ enum AssetType: String, AppEnum {
     ]
 }
 
+@available(iOS 18.0, *)
 @AssistantEntity(schema: .photos.asset)
 struct schemaPhotoEntity: IndexedEntity {
 
@@ -56,6 +57,7 @@ struct schemaPhotoEntity: IndexedEntity {
     }
 }
 
+@available(iOS 18.0, *)
 extension schemaPhotoEntity {
 
     struct schemaPhotoQuery: EntityQuery {

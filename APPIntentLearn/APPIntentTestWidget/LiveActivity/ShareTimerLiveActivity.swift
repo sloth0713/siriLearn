@@ -10,6 +10,7 @@ import Combine
 import ActivityKit
 import WidgetKit
 
+@available(iOS 18.0, *)
 @Observable
 final class ShareTimerLiveActivity: ObservableObject, Codable, Equatable, Hashable, Identifiable {
     static func == (lhs: ShareTimerLiveActivity, rhs: ShareTimerLiveActivity) -> Bool {
@@ -88,7 +89,7 @@ final class ShareTimerLiveActivity: ObservableObject, Codable, Equatable, Hashab
     }
 }
 
-
+@available(iOS 18.0, *)
 extension ShareTimerLiveActivity {
     func startActivity() {
         
