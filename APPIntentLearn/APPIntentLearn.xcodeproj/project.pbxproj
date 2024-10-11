@@ -21,6 +21,9 @@
 		2BB7831E2C69DC7300375FFC /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7831D2C69DC6100375FFC /* BookManager.swift */; };
 		2BB783212C69E28800375FFC /* SchemaIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB783202C69E28100375FFC /* SchemaIntent.swift */; };
 		2BB783232C69E86000375FFC /* SchemaPhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB783222C69E85700375FFC /* SchemaPhotoEntity.swift */; };
+		2BB858EF2CB91C1100E51233 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB858EE2CB91C0D00E51233 /* SearchManager.swift */; };
+		2BB858F12CB91C5700E51233 /* SearchIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB858F02CB91C5100E51233 /* SearchIntent.swift */; };
+		2BB858F32CB91CC700E51233 /* SearchEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB858F22CB91CBF00E51233 /* SearchEnum.swift */; };
 		2BBCCFBC2C635285004EB8C9 /* APPIntentLearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCCFBB2C635285004EB8C9 /* APPIntentLearnApp.swift */; };
 		2BBCCFBE2C635285004EB8C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCCFBD2C635285004EB8C9 /* ContentView.swift */; };
 		2BBCCFC02C635287004EB8C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BBCCFBF2C635287004EB8C9 /* Assets.xcassets */; };
@@ -111,6 +114,9 @@
 		2BB7831D2C69DC6100375FFC /* BookManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookManager.swift; sourceTree = "<group>"; };
 		2BB783202C69E28100375FFC /* SchemaIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaIntent.swift; sourceTree = "<group>"; };
 		2BB783222C69E85700375FFC /* SchemaPhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaPhotoEntity.swift; sourceTree = "<group>"; };
+		2BB858EE2CB91C0D00E51233 /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
+		2BB858F02CB91C5100E51233 /* SearchIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIntent.swift; sourceTree = "<group>"; };
+		2BB858F22CB91CBF00E51233 /* SearchEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEnum.swift; sourceTree = "<group>"; };
 		2BBCCFB82C635285004EB8C9 /* APPIntentLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPIntentLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBCCFBB2C635285004EB8C9 /* APPIntentLearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPIntentLearnApp.swift; sourceTree = "<group>"; };
 		2BBCCFBD2C635285004EB8C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -211,6 +217,16 @@
 				2BB783202C69E28100375FFC /* SchemaIntent.swift */,
 			);
 			path = SchemaIntent;
+			sourceTree = "<group>";
+		};
+		2BB858ED2CB91BFE00E51233 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2BB858F22CB91CBF00E51233 /* SearchEnum.swift */,
+				2BB858F02CB91C5100E51233 /* SearchIntent.swift */,
+				2BB858EE2CB91C0D00E51233 /* SearchManager.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		2BBCCFAF2C635285004EB8C9 = {
@@ -323,6 +339,7 @@
 		2BBCDC002C661E59004EB8C9 /* AppIntentEntity */ = {
 			isa = PBXGroup;
 			children = (
+				2BB858ED2CB91BFE00E51233 /* Search */,
 				2B93AA2C2C9D453C006886CA /* EntityType.swift */,
 				2B93AA2E2C9D4B73006886CA /* Book */,
 				2B93AA232C9D2567006886CA /* Inbox */,
@@ -495,14 +512,17 @@
 				2BB783232C69E86000375FFC /* SchemaPhotoEntity.swift in Sources */,
 				2B93AA292C9D2592006886CA /* InboxEntity.swift in Sources */,
 				2B0082522C9D236900D85E32 /* test.swift in Sources */,
+				2BB858F12CB91C5700E51233 /* SearchIntent.swift in Sources */,
 				2BBCD01B2C6392E2004EB8C9 /* LiveActivitiyIntents.swift in Sources */,
 				2BBCD0152C638FF0004EB8C9 /* AppDelegate.swift in Sources */,
+				2BB858F32CB91CC700E51233 /* SearchEnum.swift in Sources */,
 				2B93AA302C9D4B90006886CA /* BookModel.swift in Sources */,
 				2B93AA2B2C9D2843006886CA /* InboxModel.swift in Sources */,
 				2BBCD0082C635C59004EB8C9 /* ShareManager.swift in Sources */,
 				2B1FED112C748B5900325C8C /* MyShortcutsProvider.swift in Sources */,
 				2BBCDC022C661E66004EB8C9 /* BookEntity.swift in Sources */,
 				2BBCDC042C661E6F004EB8C9 /* BookAppIntent.swift in Sources */,
+				2BB858EF2CB91C1100E51233 /* SearchManager.swift in Sources */,
 				2B93AA252C9D257D006886CA /* InboxManager.swift in Sources */,
 				2BBCD0172C63923F004EB8C9 /* ShareTimerLiveActivity.swift in Sources */,
 				2BB7831E2C69DC7300375FFC /* BookManager.swift in Sources */,

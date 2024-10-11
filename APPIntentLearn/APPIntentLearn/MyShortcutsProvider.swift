@@ -8,6 +8,16 @@ import AppIntents
 
 class EntAppIntentShortcuts: AppShortcutsProvider {
     static var appShortcuts : [AppShortcut] {
+
+        AppShortcut(intent: SearchIntent(),
+                    phrases: [
+                        "Search \(\.$searchType) with \(.applicationName)",
+//                        "Search with \(.applicationName)"
+                        //有searchType作为变量就展示所有type，否则展示整体intent
+                             ],
+                    shortTitle: "Search Intent",
+                    systemImageName: "magnifyingglass")
+
         
 //        AppShortcut(intent: SchemaOpenAssetIntent(),
 //                    phrases: ["Schema Open Asset Intent \(.applicationName)"],

@@ -16,6 +16,21 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text(.now, style: .timer)
+            Button {
+                ABManager.share.enableBookBusinessIntent = true
+                EntAppIntentShortcuts.updateAppShortcutParameters()
+            } label: {
+                Label("open intent", systemImage: "lock.open")
+            }
+            
+            
+            Button {
+                ABManager.share.enableBookBusinessIntent = false
+                EntAppIntentShortcuts.updateAppShortcutParameters()
+            } label: {
+                Label("close intent", systemImage: "lock")
+            }
+
         }
         .padding()
     }
