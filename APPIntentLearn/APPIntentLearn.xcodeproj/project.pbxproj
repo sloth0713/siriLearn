@@ -24,6 +24,7 @@
 		2BB858EF2CB91C1100E51233 /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB858EE2CB91C0D00E51233 /* SearchManager.swift */; };
 		2BB858F12CB91C5700E51233 /* SearchIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB858F02CB91C5100E51233 /* SearchIntent.swift */; };
 		2BB858F32CB91CC700E51233 /* SearchEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB858F22CB91CBF00E51233 /* SearchEnum.swift */; };
+		2BB859052CB9464600E51233 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BB859032CB9464600E51233 /* Localizable.strings */; };
 		2BBCCFBC2C635285004EB8C9 /* APPIntentLearnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCCFBB2C635285004EB8C9 /* APPIntentLearnApp.swift */; };
 		2BBCCFBE2C635285004EB8C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCCFBD2C635285004EB8C9 /* ContentView.swift */; };
 		2BBCCFC02C635287004EB8C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BBCCFBF2C635287004EB8C9 /* Assets.xcassets */; };
@@ -117,6 +118,8 @@
 		2BB858EE2CB91C0D00E51233 /* SearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 		2BB858F02CB91C5100E51233 /* SearchIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchIntent.swift; sourceTree = "<group>"; };
 		2BB858F22CB91CBF00E51233 /* SearchEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEnum.swift; sourceTree = "<group>"; };
+		2BB859042CB9464600E51233 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2BB859062CB9465E00E51233 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		2BBCCFB82C635285004EB8C9 /* APPIntentLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = APPIntentLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BBCCFBB2C635285004EB8C9 /* APPIntentLearnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPIntentLearnApp.swift; sourceTree = "<group>"; };
 		2BBCCFBD2C635285004EB8C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -268,6 +271,7 @@
 				2BBCCFBD2C635285004EB8C9 /* ContentView.swift */,
 				2BBCCFBF2C635287004EB8C9 /* Assets.xcassets */,
 				2BBCCFC12C635287004EB8C9 /* Preview Content */,
+				2BB859032CB9464600E51233 /* Localizable.strings */,
 			);
 			path = APPIntentLearn;
 			sourceTree = "<group>";
@@ -456,6 +460,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 2BBCCFAF2C635285004EB8C9;
 			productRefGroup = 2BBCCFB92C635285004EB8C9 /* Products */;
@@ -476,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BBCCFC32C635287004EB8C9 /* Preview Assets.xcassets in Resources */,
+				2BB859052CB9464600E51233 /* Localizable.strings in Resources */,
 				2BBCCFC02C635287004EB8C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,6 +603,18 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		2BB859032CB9464600E51233 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BB859042CB9464600E51233 /* en */,
+				2BB859062CB9465E00E51233 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		2BBCCFDA2C635287004EB8C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -657,6 +675,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -713,6 +732,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

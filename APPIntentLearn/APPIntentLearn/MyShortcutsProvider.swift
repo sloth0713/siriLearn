@@ -51,7 +51,8 @@ class EntAppIntentShortcuts: AppShortcutsProvider {
                 optionsCollections: {
                     OptionsCollection(selectBookQuery(), title: "Favorite books", systemImageName: "book")
                 }
-            ))
+            )
+        )
         
         AppShortcut(
             intent: InboxAppIntent(),
@@ -71,6 +72,7 @@ class EntAppIntentShortcuts: AppShortcutsProvider {
                 optionsCollections: {
                     OptionsCollection(selectInboxQuery(), title: "Favorite friends", systemImageName: "bag.fill")
                 }
-            ))
+            )
+        )
     }
 }

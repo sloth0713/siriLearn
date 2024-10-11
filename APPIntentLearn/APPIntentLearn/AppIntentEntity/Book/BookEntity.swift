@@ -38,21 +38,21 @@ struct BookEntity: AppEntity, Identifiable{
                 let image = UIImage(contentsOfFile: model.imageUrl.path)!
                 let data:Data = image.pngData()!
                 
-                return DisplayRepresentation(title: "\(model.name)",
-                                             subtitle: "\(model.author)",
+                return DisplayRepresentation(title: LocalizedStringResource(stringLiteral: model.name),
+                                             subtitle: LocalizedStringResource(stringLiteral: model.author),
                                              image: DisplayRepresentation.Image(data: data))//appintent
             }else{
-                return DisplayRepresentation(title: "\(model.name)",
+                return DisplayRepresentation(title: LocalizedStringResource(stringLiteral: model.name),
                                              image: DisplayRepresentation.Image(systemName: model.imageName))
             }
             
         }else{
             if (model.type == .EntityTypeBusiness){
-                return DisplayRepresentation(title: "\(model.name)",
-                                             subtitle: "\(model.author)",
+                return DisplayRepresentation(title: LocalizedStringResource(stringLiteral: model.name),
+                                             subtitle: LocalizedStringResource(stringLiteral: model.author),
                                               image: DisplayRepresentation.Image(named: model.imageName))
             }else{
-                return DisplayRepresentation(title: "\(model.name)",
+                return DisplayRepresentation(title: LocalizedStringResource(stringLiteral: model.name),
                                              image: DisplayRepresentation.Image(systemName: model.imageName))
             }
         }
