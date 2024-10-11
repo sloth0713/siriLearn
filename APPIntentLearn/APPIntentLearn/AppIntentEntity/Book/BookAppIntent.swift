@@ -11,6 +11,7 @@ struct BookAppIntent: AppIntent {
     
     static var title: LocalizedStringResource { "Book App Intent" }
 
+    static var openAppWhenRun = true
     //用户选择后自动赋值
     @Parameter(title: "Book Name", query: selectBookQuery1())
     var Book: BookEntity
