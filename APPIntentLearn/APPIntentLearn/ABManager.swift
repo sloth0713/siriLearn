@@ -21,10 +21,10 @@ import Foundation
     override init(){
         self.useOnlineIntentIcon = false
         self.disableIntent = false
-        self.enableBookBusinessIntent = false
+        self.enableBookBusinessIntent = true
         self.enableBookGeneralIntent = true
         self.enableInboxBusinessIntent = true
-        self.enableInboxGeneralIntent = false
+        self.enableInboxGeneralIntent = true
     }
     
 }

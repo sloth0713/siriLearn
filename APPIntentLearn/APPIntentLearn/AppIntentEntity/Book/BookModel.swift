@@ -8,7 +8,7 @@
 import Foundation
 
 struct BookModel : Identifiable, Hashable, Sendable {
-    var id: UUID
+    var id: String
     
     var name: String
     var author: String
@@ -17,7 +17,7 @@ struct BookModel : Identifiable, Hashable, Sendable {
     var type: EntityType
     
     init(name: String, author: String,imageName:String,imageUrl:URL,type:EntityType) {
-        self.id = UUID()
+        self.id = name
         self.name = name
         self.author = author
         self.imageName = imageName

@@ -38,7 +38,7 @@ class BookManager{
         self.imageLoaclUrl.append(imageUrl)
     }
     
-    func findBookWithId(id:UUID) -> BookModel{
+    func findBookWithId(id:String) -> BookModel{
         var findModel : BookModel = BookModel(name: "unknown", author: "unknown", imageName: "unknown",imageUrl:URL(filePath: "fdas")!,type: .EntityTypeBusiness)
         for model:BookModel in BookManager.share.Books{
             if (model.id == id){

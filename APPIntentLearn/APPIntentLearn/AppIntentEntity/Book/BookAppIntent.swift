@@ -12,7 +12,7 @@ struct BookAppIntent: AppIntent {
     static var title: LocalizedStringResource { "Book App Intent" }
 
     //用户选择后自动赋值
-    @Parameter(title: "Book Name")
+    @Parameter(title: "Book Name", query: selectBookQuery1())
     var Book: BookEntity
 
     func perform() async throws -> some IntentResult & ReturnsValue<BookEntity> & ProvidesDialog & OpensIntent & ShowsSnippetView{
@@ -31,6 +31,8 @@ struct BuyBookIntent: AppIntent {
 //    intent连接的intent,需要两个intent都配置ProvidesDialog & ShowsSnippetView，内容是第二个intent的
     @Parameter(title: "paramsBook")
     var paramsBook: BookEntity
+    
+    static var isDiscoverable: Bool = false//创建快捷方式时不显示
     
     static var title: LocalizedStringResource { "Next Book App Intent" }
 
@@ -62,5 +64,32 @@ struct ShortcutInsightsView: View {
             }
         }
         .padding(20)
+    }
+}
+
+
+struct selectBookQuery1: EntityQuery {
+    
+    func entities(for identifiers: [BookEntity.ID]) async throws -> [BookEntity] {
+        var Books: [BookEntity] = []
+        _ = identifiers.compactMap { BookId in
+            let model:BookModel = BookManager.share.findBookWithId(id: BookId)
+            Books.append(BookEntity(model:model,id: model.id))
+        }
+        //用户选中的字符串，在这里组装成entities，返回给intent
+        return Books
+    }
+    
+    func suggestedEntities() async throws -> [BookEntity] {
+        
+        var entities:[BookEntity] = []
+
+        for model:BookModel in BookManager.share.Books{
+
+            entities.append(BookEntity(model: model, id: model.id))
+            
+        }
+        //展示所有的选择
+        return entities
     }
 }

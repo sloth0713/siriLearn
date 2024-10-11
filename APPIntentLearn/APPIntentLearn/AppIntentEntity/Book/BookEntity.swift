@@ -10,7 +10,7 @@ import Foundation
 import CoreSpotlight
 import SwiftUI
 
-struct BookEntity: AppEntity, IndexedEntity, Identifiable {//单个选项
+struct BookEntity: AppEntity, Identifiable{
     
 //    var attributeSet:CSSearchableItemAttributeSet {
 //        let attributed = CSSearchableItemAttributeSet(itemContentType: "Text")
@@ -26,10 +26,10 @@ struct BookEntity: AppEntity, IndexedEntity, Identifiable {//单个选项
 //      }
     
     var model: BookModel
-    var id: UUID
+    var id: String
     
     static var defaultQuery = selectBookQuery()
-    static var typeDisplayRepresentation: TypeDisplayRepresentation = "Book Asset"
+    static var typeDisplayRepresentation: TypeDisplayRepresentation = TypeDisplayRepresentation(name: LocalizedStringResource("chose a page you want to go"))
     
     var displayRepresentation: DisplayRepresentation {
         
@@ -60,6 +60,7 @@ struct BookEntity: AppEntity, IndexedEntity, Identifiable {//单个选项
     
 }
 
+
 struct selectBookQuery: EntityQuery {
     
         /*
@@ -72,13 +73,13 @@ struct selectBookQuery: EntityQuery {
 //        let bookModels:[BookModel] = BookManager.share.matchBookWithName(name: string)
 //        var Books: [BookEntity] = []
 //        for bookModel in bookModels {
-//            Books.append(BookEntity(model:bookModel))
+//            Books.append(BookEntity(model:bookModel,id: bookModel.id))
 //        }
 //        return Books
 //    }
     
     
-    func entities(for identifiers: [UUID]) async throws -> [BookEntity] {
+    func entities(for identifiers: [BookEntity.ID]) async throws -> [BookEntity] {
         var Books: [BookEntity] = []
         _ = identifiers.compactMap { BookId in
             let model:BookModel = BookManager.share.findBookWithId(id: BookId)
@@ -118,7 +119,7 @@ extension selectBookQuery: EntityStringQuery {
     
     func entities(matching string: String) async throws -> [BookEntity] {
 
-        let bookModels:[BookModel] = BookManager.share.matchBookWithName(name: string)
+        let bookModels:[BookModel] = BookManager.share.Books
         var Books: [BookEntity] = []
         for bookModel in bookModels {
             Books.append(BookEntity(model:bookModel,id: bookModel.id))
