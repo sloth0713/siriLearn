@@ -12,6 +12,7 @@
 		2B0082582C9D23AD00D85E32 /* objcTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0082562C9D23AD00D85E32 /* objcTask.m */; };
 		2B1FED0F2C74824700325C8C /* SchemaIntentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FED0E2C74823E00325C8C /* SchemaIntentManager.swift */; };
 		2B1FED112C748B5900325C8C /* MyShortcutsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FED102C748B4900325C8C /* MyShortcutsProvider.swift */; };
+		2B3DCD9F2CBA4C7900F7C98A /* AppShortcuts.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2B3DCD9E2CBA4C7900F7C98A /* AppShortcuts.xcstrings */; };
 		2B93AA252C9D257D006886CA /* InboxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA242C9D2578006886CA /* InboxManager.swift */; };
 		2B93AA272C9D2589006886CA /* InboxAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA262C9D2581006886CA /* InboxAppIntent.swift */; };
 		2B93AA292C9D2592006886CA /* InboxEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA282C9D258D006886CA /* InboxEntity.swift */; };
@@ -106,6 +107,7 @@
 		2B0082562C9D23AD00D85E32 /* objcTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcTask.m; sourceTree = "<group>"; };
 		2B1FED0E2C74823E00325C8C /* SchemaIntentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaIntentManager.swift; sourceTree = "<group>"; };
 		2B1FED102C748B4900325C8C /* MyShortcutsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShortcutsProvider.swift; sourceTree = "<group>"; };
+		2B3DCD9E2CBA4C7900F7C98A /* AppShortcuts.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = AppShortcuts.xcstrings; sourceTree = "<group>"; };
 		2B93AA242C9D2578006886CA /* InboxManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxManager.swift; sourceTree = "<group>"; };
 		2B93AA262C9D2581006886CA /* InboxAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxAppIntent.swift; sourceTree = "<group>"; };
 		2B93AA282C9D258D006886CA /* InboxEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxEntity.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 				2BBCCFBF2C635287004EB8C9 /* Assets.xcassets */,
 				2BBCCFC12C635287004EB8C9 /* Preview Content */,
 				2BB859032CB9464600E51233 /* Localizable.strings */,
+				2B3DCD9E2CBA4C7900F7C98A /* AppShortcuts.xcstrings */,
 			);
 			path = APPIntentLearn;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			files = (
 				2BBCCFC32C635287004EB8C9 /* Preview Assets.xcassets in Resources */,
 				2BB859052CB9464600E51233 /* Localizable.strings in Resources */,
+				2B3DCD9F2CBA4C7900F7C98A /* AppShortcuts.xcstrings in Resources */,
 				2BBCCFC02C635287004EB8C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

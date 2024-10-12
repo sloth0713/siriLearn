@@ -8,13 +8,13 @@ import AppIntents
 struct SearchIntent: AppIntent{
     static var title: LocalizedStringResource = LocalizedStringResource("search with app")
     
-    var openAppWhenRun = true
+    static var openAppWhenRun = true
     
     @Parameter(title: "search Type")
     var searchType: SearchEnum
     
-    func perform() async throws -> some IntentResult {
-        return .result()
+    func perform() async throws -> some IntentResult & ProvidesDialog{
+        return .result(dialog: IntentDialog(stringLiteral: "你搜索了 \(self.searchType)"))
     }
     
 }
