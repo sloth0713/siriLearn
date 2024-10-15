@@ -16,12 +16,12 @@ struct APPIntentTestWidgetBundle: WidgetBundle {
 //        APPIntentTestWidgetLiveActivity()
         
         //使用extension调试时最多配置一个widget，否则会报错
-//        StaticWidgetControlToogle()
+        StaticWidgetControlToogle()
 //        StaticWidgetControlButton()
 //        OpenAppWidgetControl()
-//        ConfiguredWidgetControl()
-        TimerLiveActivityControl()
-        WidgetLiveActivity()
+        ConfiguredWidgetControl()
+//        TimerLiveActivityControl()
+//        WidgetLiveActivity()
         
     }
 }

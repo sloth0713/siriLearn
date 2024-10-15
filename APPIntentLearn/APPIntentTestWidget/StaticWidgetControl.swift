@@ -14,11 +14,10 @@ struct StaticWidgetControlToogle: ControlWidget {
 
     var body: some ControlWidgetConfiguration {
         StaticControlConfiguration(kind: Self.kind) {
-            ControlWidgetToggle(isOn: ShareManager.shared.isTimerOn, action: SimpleTimerIntent()) { isTurnedOn in
+            
+            ControlWidgetToggle(isOn: ShareManager.shared.isTimerOn, action: SimpleTimerIntent()) {
                 Image(systemName: ShareManager.shared.isTimerOn ? "fan.fill" : "fan")
                 Text(ShareManager.shared.isTimerOn ? "Turned On" : "Turned Off")
-            } label: {
-                Text("fan")
             }
         }
         .displayName("Toggle Control")

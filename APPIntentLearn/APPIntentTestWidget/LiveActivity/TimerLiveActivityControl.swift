@@ -17,11 +17,9 @@ struct TimerLiveActivityControl: ControlWidget {
 
     var body: some ControlWidgetConfiguration {
         StaticControlConfiguration(kind: Self.kind) {
-            ControlWidgetToggle(isOn: ShareManager.shared.isLiveActivityTimerOn, action: LiveActivityTimerIntent()) { isTurnedOn in
-                Image(systemName: isTurnedOn ? "pencil.circle":"fan")
-                Text(isTurnedOn ? "Turned On" : "Turned Off")
-            } label: {
-                Text("Live Activity Timer")
+            ControlWidgetToggle(isOn: ShareManager.shared.isLiveActivityTimerOn, action: LiveActivityTimerIntent()) {
+                Image(systemName: ShareManager.shared.isLiveActivityTimerOn ? "pencil.circle":"fan")
+                Text(ShareManager.shared.isLiveActivityTimerOn ? "Turned On" : "Turned Off")
             }.tint(.purple)
         }
         .displayName("Live Activity Control")

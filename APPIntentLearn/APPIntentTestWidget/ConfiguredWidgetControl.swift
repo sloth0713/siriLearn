@@ -8,7 +8,7 @@
 import AppIntents
 import SwiftUI
 import WidgetKit
-
+@available(iOS 18, *)
 struct ConfiguredWidgetControl: ControlWidget {
     static let kind: String = "yjx-xcdebug.controlWidgetDemoForCode.ConfiguredWidgetControl"
 
@@ -28,6 +28,7 @@ struct ConfiguredWidgetControl: ControlWidget {
     }
 }
 
+@available(iOS 18, *)
 extension ConfiguredWidgetControl {
     struct Value {
         var name: String
@@ -39,11 +40,12 @@ extension ConfiguredWidgetControl {
         }
 
         func currentValue(configuration: UserConfiguration) async throws -> Value {
-            return ConfiguredWidgetControl.Value(name: configuration.timerName)
+            return ConfiguredWidgetControl.Value(name: configuration.timerName ?? "inbox")
         }
     }
 }
 
+@available(iOS 18, *)
 struct UserConfiguration: ControlConfigurationIntent {
     static var title: LocalizedStringResource { "Enter Scene Name Configuration" }
 
@@ -55,12 +57,13 @@ struct UserConfiguration: ControlConfigurationIntent {
          }
     
     @Parameter(title: "Scene Name", optionsProvider: FocusOptionsProvider())
-    var timerName: String
+    var timerName: String?
 }
 
+@available(iOS 18, *)
 struct openDifferentPageIntent: AppIntent {
     static var title: LocalizedStringResource { "open Different Page" }
-
+    static var openAppWhenRun = true
     @Parameter(title: "Page Name")
     var name: String
 

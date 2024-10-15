@@ -19,6 +19,7 @@
 		2B93AA2B2C9D2843006886CA /* InboxModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA2A2C9D283C006886CA /* InboxModel.swift */; };
 		2B93AA2D2C9D454B006886CA /* EntityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA2C2C9D453C006886CA /* EntityType.swift */; };
 		2B93AA302C9D4B90006886CA /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA2F2C9D4B8B006886CA /* BookModel.swift */; };
+		2B9BF9602CBE6878001F93ED /* ConfiguredWidgetControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD00C2C636474004EB8C9 /* ConfiguredWidgetControl.swift */; };
 		2BB7831E2C69DC7300375FFC /* BookManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB7831D2C69DC6100375FFC /* BookManager.swift */; };
 		2BB783212C69E28800375FFC /* SchemaIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB783202C69E28100375FFC /* SchemaIntent.swift */; };
 		2BB783232C69E86000375FFC /* SchemaPhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB783222C69E85700375FFC /* SchemaPhotoEntity.swift */; };
@@ -546,6 +547,7 @@
 				2B0082582C9D23AD00D85E32 /* objcTask.m in Sources */,
 				2BB783212C69E28800375FFC /* SchemaIntent.swift in Sources */,
 				2BBCCFBE2C635285004EB8C9 /* ContentView.swift in Sources */,
+				2B9BF9602CBE6878001F93ED /* ConfiguredWidgetControl.swift in Sources */,
 				2BBCCFBC2C635285004EB8C9 /* APPIntentLearnApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
