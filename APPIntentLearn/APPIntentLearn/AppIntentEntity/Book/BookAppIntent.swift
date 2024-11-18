@@ -27,6 +27,23 @@ struct BookAppIntent: AppIntent {
     }
 }
 
+extension BookAppIntent{
+    func performError() async throws{
+        print("performError Thread \(Thread.current)")
+        print("performError Thread \(Thread.isMainThread)")
+        throw CustomError.someError
+    }
+    
+    func performAsync() {
+        print("performAsync Thread \(Thread.current)")
+        print("performAsync Thread \(Thread.isMainThread)")
+    }
+}
+
+enum CustomError: Error {
+    case someError
+}
+
 struct BuyBookIntent: AppIntent {
     
 //    intent连接的intent,需要两个intent都配置ProvidesDialog & ShowsSnippetView，内容是第二个intent的

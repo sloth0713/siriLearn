@@ -20,6 +20,7 @@ struct APPIntentLearnApp: App {
             
 //            self.donateIntent()
 //            self.donateToCoreSpotlight()
+            self.asyncTest()
         }
         
     }
@@ -61,6 +62,22 @@ struct APPIntentLearnApp: App {
             intent.Book = BookEntity(model: BookManager.share.hongloumeng , id: BookManager.share.hongloumeng.name)
             let id:IntentDonationIdentifier = intent.donate()
             print(" intent.donate \(id)")
+        }
+    }
+    
+    func asyncTest () {
+        for i in 1...10{
+            let intent = BookAppIntent()
+            Task {
+                do {
+                    intent.performAsync()//不async函数的话，线程仍然是主线程
+                    try await intent.performError()//async方法会由系统创建一个线程
+                }
+                catch {//如果不catch，task剩余的代码不会被执行
+                    print("Error fetching data: \(error)")
+                }
+                print("task after try catch")
+            }
         }
     }
     
