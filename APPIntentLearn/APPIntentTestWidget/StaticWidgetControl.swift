@@ -8,7 +8,7 @@
 import AppIntents
 import SwiftUI
 import WidgetKit
-
+@available(iOS 18.0, *)
 struct StaticWidgetControlToogle: ControlWidget {
     static let kind: String = "yjx-xcdebug.APPIntentLearn.APPIntentTestWidget_SimpleTimer"
 
@@ -23,7 +23,7 @@ struct StaticWidgetControlToogle: ControlWidget {
         .displayName("Toggle Control")
     }
 }
-
+@available(iOS 18.0, *)
 struct StaticWidgetControlButton: ControlWidget {
     static let kind: String = "yjx-xcdebug.APPIntentLearn.APPIntentTestWidget_ButtonWidget"
 
@@ -39,7 +39,7 @@ struct StaticWidgetControlButton: ControlWidget {
     
 }
 
-
+@available(iOS 18.0, *)
 struct ButtonWidgetControlIntent: AppIntent {
     static var title: LocalizedStringResource = "title_Yjx_ButtonWidgetControlIntent"
     static var description = IntentDescription("description_Yjx_ButtonWidgetControlIntent")
@@ -52,7 +52,7 @@ struct ButtonWidgetControlIntent: AppIntent {
 }
 
 
-
+@available(iOS 18.0, *)
 struct SimpleTimerIntent: SetValueIntent {
     static var title: LocalizedStringResource { "Simple timer" }
     

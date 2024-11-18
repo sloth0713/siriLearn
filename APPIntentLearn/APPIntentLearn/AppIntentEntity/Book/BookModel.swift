@@ -24,4 +24,13 @@ struct BookModel : Identifiable, Hashable, Sendable {
         self.imageUrl = imageUrl
         self.type = type
     }
+    
+    init(name: String, author: String,imageName:String,type:EntityType) {
+        self.id = name
+        self.name = name
+        self.author = author
+        self.imageName = imageName
+        self.imageUrl =  URL(filePath: "fdas")!
+        self.type = type
+    }
 }

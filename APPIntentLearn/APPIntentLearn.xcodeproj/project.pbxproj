@@ -60,6 +60,7 @@
 		2BBCD0212C6399CE004EB8C9 /* TimerLiveActivityControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCD00E2C636D42004EB8C9 /* TimerLiveActivityControl.swift */; };
 		2BBCDC022C661E66004EB8C9 /* BookEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCDC012C661E65004EB8C9 /* BookEntity.swift */; };
 		2BBCDC042C661E6F004EB8C9 /* BookAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBCDC032C661E6D004EB8C9 /* BookAppIntent.swift */; };
+		2BEE3F552CE6016D00BE1138 /* AppShortcutsProviderOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEE3F542CE6015C00BE1138 /* AppShortcutsProviderOld.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,7 @@
 		2BBCD0202C639890004EB8C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2BBCDC012C661E65004EB8C9 /* BookEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEntity.swift; sourceTree = "<group>"; };
 		2BBCDC032C661E6D004EB8C9 /* BookAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAppIntent.swift; sourceTree = "<group>"; };
+		2BEE3F542CE6015C00BE1138 /* AppShortcutsProviderOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShortcutsProviderOld.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 		2BBCCFBA2C635285004EB8C9 /* APPIntentLearn */ = {
 			isa = PBXGroup;
 			children = (
+				2BEE3F542CE6015C00BE1138 /* AppShortcutsProviderOld.swift */,
 				2B0082532C9D23AD00D85E32 /* ABManager.swift */,
 				2B0082542C9D23AD00D85E32 /* APPIntentLearn-Bridging-Header.h */,
 				2B0082552C9D23AD00D85E32 /* objcTask.h */,
@@ -530,6 +533,7 @@
 				2B93AA302C9D4B90006886CA /* BookModel.swift in Sources */,
 				2B93AA2B2C9D2843006886CA /* InboxModel.swift in Sources */,
 				2BBCD0082C635C59004EB8C9 /* ShareManager.swift in Sources */,
+				2BEE3F552CE6016D00BE1138 /* AppShortcutsProviderOld.swift in Sources */,
 				2B1FED112C748B5900325C8C /* MyShortcutsProvider.swift in Sources */,
 				2BBCDC022C661E66004EB8C9 /* BookEntity.swift in Sources */,
 				2BBCDC042C661E6F004EB8C9 /* BookAppIntent.swift in Sources */,

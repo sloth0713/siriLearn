@@ -7,36 +7,63 @@
 
 import SwiftUI
 import CoreSpotlight
+import AppIntents
 
 @main
+@available(iOS 18, *)
 struct APPIntentLearnApp: App {
     init() {
         if (ABManager.share.useOnlineIntentIcon){
             downloadOnlineIntentImageLaunchTask()
         }else{
             EntAppIntentShortcuts.updateAppShortcutParameters()
+            
+//            self.donateIntent()
+//            self.donateToCoreSpotlight()
         }
         
-//        Task {
-//            do {
-//                var entities:[BookEntity] = []
-//            
-//                let model1:BookModel = BookModel(name: "xiyouji", author: "author_xiyouji",imageName: "xiyouji")
-//                let model2:BookModel = BookModel(name: "hongloumeng", author: "author_hongloumeng",imageName: "hongloumeng")
-//                let model3:BookModel = BookModel(name: "sanguoyanyi", author: "author_sanguoyanyi",imageName: "sanguoyanyi")
-//                let model4:BookModel = BookModel(name: "shuihuzhuan", author: "author_shuihuzhuan",imageName: "shuihuzhuan")
-//                entities.append(BookEntity(model: model1, id: model1.id))
-//                entities.append(BookEntity(model: model2, id: model2.id))
-//                entities.append(BookEntity(model: model3, id: model3.id))
-//                entities.append(BookEntity(model: model4, id: model4.id))
-//                try await CSSearchableIndex
-//                    .default()
-//                    .indexAppEntities(entities)
-//            } catch {
-//                print("Error: \(error.localizedDescription)")
-//            }
-//        }
     }
+    func donateToCoreSpotlight() {
+        Task {
+            do {
+                var entities:[BookEntity] = []
+
+                let model1:BookModel = BookModel(name: "xiyouji", author: "author_xiyouji",imageName: "xiyouji", type: .EntityTypeBusiness)
+                let model2:BookModel = BookModel(name: "hongloumeng", author: "author_hongloumeng",imageName: "hongloumeng", type: .EntityTypeBusiness)
+                let model3:BookModel = BookModel(name: "sanguoyanyi", author: "author_sanguoyanyi",imageName: "sanguoyanyi", type: .EntityTypeBusiness)
+                let model4:BookModel = BookModel(name: "shuihuzhuan", author: "author_shuihuzhuan",imageName: "shuihuzhuan", type: .EntityTypeBusiness)
+                entities.append(BookEntity(model: model1, id: model1.id))
+                entities.append(BookEntity(model: model2, id: model2.id))
+                entities.append(BookEntity(model: model3, id: model3.id))
+                entities.append(BookEntity(model: model4, id: model4.id))
+                try await CSSearchableIndex
+                    .default()
+                    .indexAppEntities(entities)
+            } catch {
+                print("Error: \(error.localizedDescription)")
+            }
+        }
+    }
+    
+    func donateIntent () {
+        for i in 1...100{
+//                IntentDonationManager
+            let intent = BookAppIntent()
+            Task {
+                do {
+                    try await intent.perform()
+//                        print(data)
+                } catch {
+                    print("Error fetching data: \(error)")
+                }
+            }
+//
+            intent.Book = BookEntity(model: BookManager.share.hongloumeng , id: BookManager.share.hongloumeng.name)
+            let id:IntentDonationIdentifier = intent.donate()
+            print(" intent.donate \(id)")
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -44,6 +71,15 @@ struct APPIntentLearnApp: App {
     }
 }
 
+//@available(iOS 18, *)
+//public extension CSSearchableItem {
+//    func associateAppEntity(
+//        _ appEntity: some IndexedEntity,
+//        priority: Int
+//    )
+//}
+
+@available(iOS 18, *)
 extension APPIntentLearnApp {
     
     func downloadOnlineIntentImageLaunchTask (){
@@ -84,7 +120,7 @@ extension APPIntentLearnApp {
                 BookManager.share.appendImageUrl(bookName:bookName, imageUrl: destinationURL)
                 let count:Int = BookManager.share.imageLoaclUrl.count
                 if (count==4){
-                    EntAppIntentShortcuts.updateAppShortcutParameters()
+//                    EntAppIntentShortcuts.updateAppShortcutParameters()
                 }
                 completion(destinationURL)
             } catch {

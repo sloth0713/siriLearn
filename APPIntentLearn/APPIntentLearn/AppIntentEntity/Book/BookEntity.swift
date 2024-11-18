@@ -12,19 +12,6 @@ import SwiftUI
 
 struct BookEntity: AppEntity, Identifiable{
     
-//    var attributeSet:CSSearchableItemAttributeSet {
-//        let attributed = CSSearchableItemAttributeSet(itemContentType: "Text")
-//        attributed.displayName = "jjj \(model.author)"
-//        return attributed
-//    }
-
-//    var attributeSet: CSSearchableItemAttributeSet{
-//        let attributes = CSSearchableItemAttributeSet()
-//        attributes.displayName = "jjj \(model.author)"
-//        attributes.contentDescription = "jjj contentDescription \(model.author)"
-//        return attributes
-//      }
-    
     var model: BookModel
     var id: String
     
@@ -56,6 +43,28 @@ struct BookEntity: AppEntity, Identifiable{
                                              image: DisplayRepresentation.Image(systemName: model.imageName))
             }
         }
+    }
+    
+}
+
+@available(iOS 18, *)
+extension BookEntity: IndexedEntity
+{
+    var attributeSet:CSSearchableItemAttributeSet {
+        let attributed = CSSearchableItemAttributeSet()
+//        attributed.keywords = ["jjj \(model.author)"]
+        attributed.displayName = "jjj \(model.author)"
+        let searchableItems = [CSSearchableItem(uniqueIdentifier: "jjj \(model.author)",
+                                          domainIdentifier: "dsaf", // TODO: put app's bundle id here
+                                          attributeSet: attributed)]
+        CSSearchableIndex.default().indexSearchableItems(searchableItems) { error in
+          if let error = error {
+            print("Unable to index item: \(error)")
+          }else {
+              print("index item success")
+          }
+        }
+        return attributed
     }
     
 }

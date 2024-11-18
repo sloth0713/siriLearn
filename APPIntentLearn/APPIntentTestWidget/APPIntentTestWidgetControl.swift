@@ -8,7 +8,7 @@
 import AppIntents
 import SwiftUI
 import WidgetKit
-
+@available(iOS 18.0, *)
 struct APPIntentTestWidgetControl: ControlWidget {
     static let kind: String = "yjx-xcdebug.APPIntentLearn.APPIntentTestWidget"
 
@@ -30,7 +30,7 @@ struct APPIntentTestWidgetControl: ControlWidget {
         .description("A an example control that runs a timer.")
     }
 }
-
+@available(iOS 18.0, *)
 extension APPIntentTestWidgetControl {
     struct Value {
         var isRunning: Bool
@@ -48,14 +48,14 @@ extension APPIntentTestWidgetControl {
         }
     }
 }
-
+@available(iOS 18.0, *)
 struct TimerConfiguration: ControlConfigurationIntent {
     static var title: LocalizedStringResource { "Timer Name Configuration" }
 
     @Parameter(title: "Timer Name", default: "aa")
     var timerName: String
 }
-
+@available(iOS 18.0, *)
 struct StartTimerIntent: SetValueIntent {
     static var title: LocalizedStringResource { "Start a timer" }
 
