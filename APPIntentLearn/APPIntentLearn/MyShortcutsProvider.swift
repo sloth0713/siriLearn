@@ -35,7 +35,7 @@ class EntAppIntentShortcuts: AppShortcutsProvider {
                         for: \.$searchType,
                         summary: Summary("Get \(\.$searchType)"),
                         optionsCollections: {
-                            OptionsCollection(SearchOptionsProvider(), title: "Guess you like", systemImageName: "magnifyingglass")
+                            OptionsCollection(SearchOptionsProvider(), title: "Search you like", systemImageName: "magnifyingglass")
                         }
                     ))
 
