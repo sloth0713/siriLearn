@@ -1,6 +1,19 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "${Entity} with ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "${Entity} with ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
     "Get ${Book} with ${applicationName}" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {

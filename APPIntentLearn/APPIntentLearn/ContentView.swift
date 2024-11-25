@@ -30,6 +30,13 @@ struct ContentView: View {
             } label: {
                 Label("close intent", systemImage: "lock")
             }
+            
+            Button {
+                GYLManager.share.updateGYLOfLocation(newGYL:GYLModel(name: "gylnew", imageName: "arrow.clockwise.circle", location: .GYLLocation2))
+                EntAppIntentShortcuts.updateAppShortcutParameters()
+            } label: {
+                Label("update GYL", systemImage: "arrow.clockwise.circle")
+            }
 
         }
         .padding()

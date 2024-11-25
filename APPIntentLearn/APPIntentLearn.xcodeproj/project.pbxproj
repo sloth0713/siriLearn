@@ -12,6 +12,10 @@
 		2B0082582C9D23AD00D85E32 /* objcTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0082562C9D23AD00D85E32 /* objcTask.m */; };
 		2B1FED0F2C74824700325C8C /* SchemaIntentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FED0E2C74823E00325C8C /* SchemaIntentManager.swift */; };
 		2B1FED112C748B5900325C8C /* MyShortcutsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FED102C748B4900325C8C /* MyShortcutsProvider.swift */; };
+		2B37EB592CEED6D900C0C96F /* GYLIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B37EB582CEED6CA00C0C96F /* GYLIntent.swift */; };
+		2B37EB5B2CEED70800C0C96F /* GYLEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B37EB5A2CEED70100C0C96F /* GYLEntity.swift */; };
+		2B37EB5D2CEED71300C0C96F /* GYLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B37EB5C2CEED70F00C0C96F /* GYLModel.swift */; };
+		2B37EB5F2CEED93A00C0C96F /* GYLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B37EB5E2CEED93500C0C96F /* GYLManager.swift */; };
 		2B3DCD9F2CBA4C7900F7C98A /* AppShortcuts.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2B3DCD9E2CBA4C7900F7C98A /* AppShortcuts.xcstrings */; };
 		2B93AA252C9D257D006886CA /* InboxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA242C9D2578006886CA /* InboxManager.swift */; };
 		2B93AA272C9D2589006886CA /* InboxAppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93AA262C9D2581006886CA /* InboxAppIntent.swift */; };
@@ -109,6 +113,10 @@
 		2B0082562C9D23AD00D85E32 /* objcTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcTask.m; sourceTree = "<group>"; };
 		2B1FED0E2C74823E00325C8C /* SchemaIntentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaIntentManager.swift; sourceTree = "<group>"; };
 		2B1FED102C748B4900325C8C /* MyShortcutsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShortcutsProvider.swift; sourceTree = "<group>"; };
+		2B37EB582CEED6CA00C0C96F /* GYLIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYLIntent.swift; sourceTree = "<group>"; };
+		2B37EB5A2CEED70100C0C96F /* GYLEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYLEntity.swift; sourceTree = "<group>"; };
+		2B37EB5C2CEED70F00C0C96F /* GYLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYLModel.swift; sourceTree = "<group>"; };
+		2B37EB5E2CEED93500C0C96F /* GYLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYLManager.swift; sourceTree = "<group>"; };
 		2B3DCD9E2CBA4C7900F7C98A /* AppShortcuts.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = AppShortcuts.xcstrings; sourceTree = "<group>"; };
 		2B93AA242C9D2578006886CA /* InboxManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxManager.swift; sourceTree = "<group>"; };
 		2B93AA262C9D2581006886CA /* InboxAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxAppIntent.swift; sourceTree = "<group>"; };
@@ -194,6 +202,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B37EB572CEED69600C0C96F /* GuessYouLike */ = {
+			isa = PBXGroup;
+			children = (
+				2B37EB5E2CEED93500C0C96F /* GYLManager.swift */,
+				2B37EB5C2CEED70F00C0C96F /* GYLModel.swift */,
+				2B37EB5A2CEED70100C0C96F /* GYLEntity.swift */,
+				2B37EB582CEED6CA00C0C96F /* GYLIntent.swift */,
+			);
+			path = GuessYouLike;
+			sourceTree = "<group>";
+		};
 		2B93AA232C9D2567006886CA /* Inbox */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +369,7 @@
 		2BBCDC002C661E59004EB8C9 /* AppIntentEntity */ = {
 			isa = PBXGroup;
 			children = (
+				2B37EB572CEED69600C0C96F /* GuessYouLike */,
 				2BB858ED2CB91BFE00E51233 /* Search */,
 				2B93AA2C2C9D453C006886CA /* EntityType.swift */,
 				2B93AA2E2C9D4B73006886CA /* Book */,
@@ -526,6 +546,7 @@
 				2BB783232C69E86000375FFC /* SchemaPhotoEntity.swift in Sources */,
 				2B93AA292C9D2592006886CA /* InboxEntity.swift in Sources */,
 				2B0082522C9D236900D85E32 /* test.swift in Sources */,
+				2B37EB5D2CEED71300C0C96F /* GYLModel.swift in Sources */,
 				2BB858F12CB91C5700E51233 /* SearchIntent.swift in Sources */,
 				2BBCD01B2C6392E2004EB8C9 /* LiveActivitiyIntents.swift in Sources */,
 				2BBCD0152C638FF0004EB8C9 /* AppDelegate.swift in Sources */,
@@ -536,16 +557,19 @@
 				2BEE3F552CE6016D00BE1138 /* AppShortcutsProviderOld.swift in Sources */,
 				2B1FED112C748B5900325C8C /* MyShortcutsProvider.swift in Sources */,
 				2BBCDC022C661E66004EB8C9 /* BookEntity.swift in Sources */,
+				2B37EB5F2CEED93A00C0C96F /* GYLManager.swift in Sources */,
 				2BBCDC042C661E6F004EB8C9 /* BookAppIntent.swift in Sources */,
 				2BB858EF2CB91C1100E51233 /* SearchManager.swift in Sources */,
 				2B93AA252C9D257D006886CA /* InboxManager.swift in Sources */,
 				2BBCD0172C63923F004EB8C9 /* ShareTimerLiveActivity.swift in Sources */,
 				2BB7831E2C69DC7300375FFC /* BookManager.swift in Sources */,
 				2BBCD00B2C63612D004EB8C9 /* OpenAppWidgetControl.swift in Sources */,
+				2B37EB5B2CEED70800C0C96F /* GYLEntity.swift in Sources */,
 				2B1FED0F2C74824700325C8C /* SchemaIntentManager.swift in Sources */,
 				2BBCD0132C637252004EB8C9 /* TimerLiveActivity.swift in Sources */,
 				2B93AA272C9D2589006886CA /* InboxAppIntent.swift in Sources */,
 				2BBCD0212C6399CE004EB8C9 /* TimerLiveActivityControl.swift in Sources */,
+				2B37EB592CEED6D900C0C96F /* GYLIntent.swift in Sources */,
 				2B93AA2D2C9D454B006886CA /* EntityType.swift in Sources */,
 				2B0082572C9D23AD00D85E32 /* ABManager.swift in Sources */,
 				2B0082582C9D23AD00D85E32 /* objcTask.m in Sources */,

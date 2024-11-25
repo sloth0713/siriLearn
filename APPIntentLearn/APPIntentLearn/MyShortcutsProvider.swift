@@ -9,6 +9,20 @@ import AppIntents
 class EntAppIntentShortcuts: AppShortcutsProvider {
     static var appShortcuts : [AppShortcut] {
 
+        AppShortcut(intent: GYLIntent(),
+                    phrases: [
+                        "\(\.$Entity) with \(.applicationName)",
+                             ],
+                    shortTitle: "Guess you like",
+                    systemImageName: "heart",
+                    parameterPresentation: ParameterPresentation(
+                        for: \.$Entity,
+                        summary: Summary("Get \(\.$Entity)"),
+                        optionsCollections: {
+                            OptionsCollection(SelectGYLQuery(), title: "Guess you like", systemImageName: "heart")
+                        }
+                    ))
+        
         AppShortcut(intent: SearchIntent(),
                     phrases: [
                         "Search \(\.$searchType) with \(.applicationName)",
