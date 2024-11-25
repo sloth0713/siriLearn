@@ -18,3 +18,9 @@ struct SearchIntent: AppIntent{
     }
     
 }
+
+struct SearchOptionsProvider: DynamicOptionsProvider {
+ func results() async throws -> [SearchEnum] {
+     return [.Art, .Education, .Science]
+ }
+}

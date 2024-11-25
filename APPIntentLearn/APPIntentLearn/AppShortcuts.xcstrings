@@ -47,8 +47,7 @@
           "stringSet" : {
             "state" : "new",
             "values" : [
-              "Search ${searchType} with ${applicationName}",
-              "Search with ${applicationName}"
+              "Search ${searchType} with ${applicationName}"
             ]
           }
         }

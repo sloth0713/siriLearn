@@ -26,11 +26,18 @@ class EntAppIntentShortcuts: AppShortcutsProvider {
         AppShortcut(intent: SearchIntent(),
                     phrases: [
                         "Search \(\.$searchType) with \(.applicationName)",
-                        "Search with \(.applicationName)"
+//                        "Search with \(.applicationName)"
                         //有searchType作为变量就展示所有type，否则展示整体intent
                              ],
                     shortTitle: "Search Intent",
-                    systemImageName: "magnifyingglass")
+                    systemImageName: "magnifyingglass",
+                    parameterPresentation: ParameterPresentation(
+                        for: \.$searchType,
+                        summary: Summary("Get \(\.$searchType)"),
+                        optionsCollections: {
+                            OptionsCollection(SearchOptionsProvider(), title: "Guess you like", systemImageName: "magnifyingglass")
+                        }
+                    ))
 
         
 //        AppShortcut(intent: SchemaOpenAssetIntent(),
