@@ -5,6 +5,11 @@
 //  Created by ByteDance on 2024/11/21.
 //
 
+/*
+ GYLIntent的目的是为了占位，占住app最常用的3个功能，即tophit中的功能，防止某些功能的entity其实已经消失，但是tophit中搜索仍然能搜到这个功能，这时点击功能，会出现shortcut app的报错，本质上这是一个iOS系统的bug，https://developer.apple.com/forums/thread/766051/
+ 但是苹果没有修复，所以我们通过GYLIntent占位的方式解决这个问题。这样能够保持tophit中的功能是永远存在的。tophit中的内容可以通过updateGYLOfLocation方法来更新
+ */
+
 import AppIntents
 import SwiftUI
 
