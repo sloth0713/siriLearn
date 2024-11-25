@@ -32,7 +32,7 @@ struct ContentView: View {
             }
             
             Button {
-                GYLManager.share.updateGYLOfLocation(newGYL:GYLModel(name: "gylnew", imageName: "arrow.clockwise.circle", location: .GYLLocation2))
+                GYLManager.share.updateGYLOfLocation(newGYL:GYLModel(name: "gylnew", imageName: "arrow.clockwise.circle", location: .GYLLocation1,metaInfo:[bizLineNameKey:bizLineNameNew,"function":"gylnew"]))
                 EntAppIntentShortcuts.updateAppShortcutParameters()
             } label: {
                 Label("update GYL", systemImage: "arrow.clockwise.circle")

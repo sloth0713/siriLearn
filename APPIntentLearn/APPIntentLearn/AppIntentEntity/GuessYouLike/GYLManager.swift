@@ -13,9 +13,9 @@ class GYLManager{
     
     init() {
         self.GYLModels = [
-            GYLModel(name: "share", imageName: "square.and.arrow.up", location: .GYLLocation1),
-            GYLModel(name: "download", imageName: "square.and.arrow.down", location: .GYLLocation2),
-            GYLModel(name: "write", imageName: "pencil.line", location: .GYLLocation3),
+            GYLModel(name: "share", imageName: "square.and.arrow.up", location: .GYLLocation1,metaInfo:[bizLineNameKey:bizLineName1,"function":"share"]),
+            GYLModel(name: "download", imageName: "square.and.arrow.down", location: .GYLLocation2,metaInfo:[bizLineNameKey:bizLineName2,"function":"download"]),
+            GYLModel(name: "write", imageName: "pencil.line", location: .GYLLocation3,metaInfo:[bizLineNameKey:bizLineName3,"function":"write"]),
         ]
     }
     
@@ -36,7 +36,7 @@ class GYLManager{
     }
     
     func findModelWithId(id:String) -> GYLModel{
-        var findModel : GYLModel = GYLModel(name: "share", imageName: "square.and.arrow.up", location: .GYLLocation1)
+        var findModel : GYLModel = GYLModel(name: "default", imageName: "play.fill", location: .GYLLocation1,metaInfo:[bizLineNameKey:bizLineNameDefault,"function":"default"])
         for model:GYLModel in GYLManager.share.GYLModels{
             if (model.id == id){
                 findModel = model
