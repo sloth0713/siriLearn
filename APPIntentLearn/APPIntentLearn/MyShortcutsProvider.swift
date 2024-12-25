@@ -9,6 +9,21 @@ import AppIntents
 class EntAppIntentShortcuts: AppShortcutsProvider {
     static var appShortcuts : [AppShortcut] {
 
+        //suggestion那边永远展示注册的第一个的intent结果
+//        AppShortcut(intent: SingleIntent2(),
+//                    phrases: [
+//                        "SingleIntent2 with \(.applicationName)",
+//                             ],
+//                    shortTitle: "Single Intent2",
+//                    systemImageName: "heart")
+//
+//        AppShortcut(intent: SingleIntent(),
+//                    phrases: [
+//                        "SingleIntent with \(.applicationName)",
+//                             ],
+//                    shortTitle: "Single Intent1",
+//                    systemImageName: "heart")
+        
         AppShortcut(intent: GYLIntent(),
                     phrases: [
                         "\(\.$Entity) with \(.applicationName)",
@@ -70,7 +85,7 @@ class EntAppIntentShortcuts: AppShortcutsProvider {
                 for: \.$Book,
                 summary: Summary("Get \(\.$Book)"),
                 optionsCollections: {
-                    OptionsCollection(selectBookQuery(), title: "Favorite books", systemImageName: "book")
+                    OptionsCollection(selectBookQuery1(), title: "Favorite books", systemImageName: "book")
                 }
             )
         )

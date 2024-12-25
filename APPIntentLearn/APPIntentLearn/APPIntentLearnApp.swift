@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreSpotlight
 import AppIntents
+import Intents
 
 @main
 @available(iOS 18, *)
@@ -18,9 +19,9 @@ struct APPIntentLearnApp: App {
         }else{
             EntAppIntentShortcuts.updateAppShortcutParameters()
             
-//            self.donateIntent()
+            self.donateIntent()
 //            self.donateToCoreSpotlight()
-            self.asyncTest()
+//            self.asyncTest()
         }
         
     }
@@ -47,21 +48,27 @@ struct APPIntentLearnApp: App {
     }
     
     func donateIntent () {
-        for i in 1...100{
+        for _ in 1...100{
 //                IntentDonationManager
-            let intent = BookAppIntent()
+            let intent = SingleIntent()
+            
+//            IntentDonationManager.shared.donate(intent: intent)
+//            INInteraction(intent: intent, response: nil).donate(completion: nil)
+            
+//            let id:IntentDonationIdentifier = intent.donate()
             Task {
                 do {
                     try await intent.perform()
-//                        print(data)
+//                    let IntentDialog:ReturnsValue = try await intent.callAsFunction(donate: true)
+                    print("success")
                 } catch {
                     print("Error fetching data: \(error)")
                 }
             }
 //
-            intent.Book = BookEntity(model: BookManager.share.hongloumeng , id: BookManager.share.hongloumeng.name)
-            let id:IntentDonationIdentifier = intent.donate()
-            print(" intent.donate \(id)")
+//            intent.Book = BookEntity(model: BookManager.share.hongloumeng , id: BookManager.share.hongloumeng.name)
+//            let id:IntentDonationIdentifier = intent.donate()
+//            print(" intent.donate \(id)")
         }
     }
     

@@ -7,6 +7,42 @@
 import AppIntents
 import SwiftUI
 
+struct SingleIntent2: AppIntent  {
+    
+    static var title: LocalizedStringResource { "SingleIntent2" }
+    static var persistentIdentifier: String = "SingleIntent2"
+    static var description: IntentDescription? = IntentDescription(stringLiteral: "SingleIntent2 description")
+    static var openAppWhenRun = true
+
+    func perform() async throws -> some IntentResult & ProvidesDialog{
+        print("SingleIntent2")
+        return .result(
+            dialog: IntentDialog("")
+        )
+    }
+}
+
+struct SingleIntent: AppIntent , PredictableIntent {
+    
+    static var title: LocalizedStringResource { "SingleIntent" }
+    static var persistentIdentifier: String = "SingleIntent"
+    static var description: IntentDescription? = IntentDescription(stringLiteral: "SingleIntent description")
+    static var openAppWhenRun = true
+    static var predictionConfiguration: some IntentPredictionConfiguration {
+        IntentPrediction {
+            DisplayRepresentation(
+                title: "SingleIntent",
+                subtitle: "SingleIntent"
+            )
+        }
+    }
+
+    func perform() async throws -> some IntentResult {
+        print("SingleIntent")
+        return .result()
+    }
+}
+
 struct BookAppIntent: AppIntent {
     
     static var title: LocalizedStringResource { "Book App Intent" }
