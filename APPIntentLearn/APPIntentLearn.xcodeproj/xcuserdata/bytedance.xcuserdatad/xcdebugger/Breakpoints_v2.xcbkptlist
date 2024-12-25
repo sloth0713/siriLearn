@@ -62,10 +62,10 @@
             filePath = "APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "BookAppIntent"
-            landmarkType = "14">
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "Book"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -78,8 +78,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "Book"
             landmarkType = "24">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "perform()"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +142,8 @@
             filePath = "APPIntentLearn/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -158,8 +158,8 @@
             filePath = "APPIntentLearn/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -206,8 +206,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "perform()"
             landmarkType = "7">
          </BreakpointContent>
@@ -254,8 +254,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "performAsync()"
             landmarkType = "7">
          </BreakpointContent>
@@ -270,8 +270,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "performError()"
             landmarkType = "7">
          </BreakpointContent>
@@ -414,8 +414,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "entities(for:)"
             landmarkType = "7">
             <Locations>
@@ -446,6 +446,20 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "141"
                   endingLineNumber = "141">
+               </Location>
+               <Location
+                  uuid = "6AE6F350-8A80-44DD-911B-060BCB54970D - bfcccc60965bdbe4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for APPIntentLearn.selectBookQuery1.entities(for: Swift.Array&lt;Swift.String&gt;) async throws -&gt; Swift.Array&lt;APPIntentLearn.BookEntity&gt;"
+                  moduleName = "APPIntentLearn.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bytedance/Documents/siriLearn/APPIntentLearn/APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -492,8 +506,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "perform()"
             landmarkType = "7">
          </BreakpointContent>
@@ -508,8 +522,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "perform()"
             landmarkType = "7">
          </BreakpointContent>

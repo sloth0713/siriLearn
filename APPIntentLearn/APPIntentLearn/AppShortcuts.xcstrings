@@ -40,6 +40,19 @@
         }
       }
     },
+    "PlayVideoIntentImpl with ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "PlayVideoIntentImpl with ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
     "Search ${searchType} with ${applicationName}" : {
       "extractionState" : "extracted_with_value",
       "localizations" : {

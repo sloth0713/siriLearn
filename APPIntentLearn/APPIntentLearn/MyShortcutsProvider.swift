@@ -6,9 +6,17 @@
 //
 import AppIntents
 
+@available(iOS 17.2, *)
 class EntAppIntentShortcuts: AppShortcutsProvider {
     static var appShortcuts : [AppShortcut] {
 
+        AppShortcut(intent: PlayVideoIntentImpl(),
+                    phrases: [
+                        "PlayVideoIntentImpl with \(.applicationName)",
+                             ],
+                    shortTitle: "PlayVideoIntentImpl",
+                    systemImageName: "play")
+        
         //suggestion那边永远展示注册的第一个的intent结果
         AppShortcut(intent: SingleIntent2(),
                     phrases: [

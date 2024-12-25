@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 17.2, *)
 struct ContentView: View {
 //    var current:int
     
@@ -45,6 +46,7 @@ struct ContentView: View {
     
 }
 
+@available(iOS 17.2, *)
 #Preview {
     ContentView()
 }

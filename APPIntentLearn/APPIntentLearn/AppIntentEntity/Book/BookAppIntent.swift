@@ -7,6 +7,25 @@
 import AppIntents
 import SwiftUI
 
+
+@available(iOS 17.2, *)
+struct PlayVideoIntentImpl: PlayVideoIntent  {
+    static var supportedCategories: [VideoCategory] = [.freeform]
+    
+    @Parameter(title: "term")
+    var term: String
+    
+    
+    static var title: LocalizedStringResource { "PlayVideoIntentImpl" }
+    static var description: IntentDescription? = IntentDescription(stringLiteral: "PlayVideoIntentImpl description")
+    static var openAppWhenRun = true
+    func perform() async throws -> some IntentResult & ProvidesDialog{
+        return .result(
+            dialog: IntentDialog("")
+        )
+    }
+}
+
 struct SingleIntent2: AppIntent  {
     
     static var title: LocalizedStringResource { "SingleIntent2" }
