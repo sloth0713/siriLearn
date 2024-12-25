@@ -13,9 +13,9 @@ struct SingleIntent2: AppIntent  {
     static var persistentIdentifier: String = "SingleIntent2"
     static var description: IntentDescription? = IntentDescription(stringLiteral: "SingleIntent2 description")
     static var openAppWhenRun = true
-
+//    static var authenticationPolicy: IntentAuthenticationPolicy = .alwaysAllowed
     func perform() async throws -> some IntentResult & ProvidesDialog{
-        print("SingleIntent2")
+        print("SingleIntent2 \(SingleIntent2.authenticationPolicy)")
         return .result(
             dialog: IntentDialog("")
         )
@@ -28,6 +28,12 @@ struct SingleIntent: AppIntent , PredictableIntent {
     static var persistentIdentifier: String = "SingleIntent"
     static var description: IntentDescription? = IntentDescription(stringLiteral: "SingleIntent description")
     static var openAppWhenRun = true
+    static var authenticationPolicy: IntentAuthenticationPolicy = .alwaysAllowed
+    
+    //在创建shortcut的时候，展示详细的信息
+    static var parameterSummary: some ParameterSummary {
+            Summary("Get information on SingleIntent ")
+    }
     static var predictionConfiguration: some IntentPredictionConfiguration {
         IntentPrediction {
             DisplayRepresentation(
@@ -38,7 +44,7 @@ struct SingleIntent: AppIntent , PredictableIntent {
     }
 
     func perform() async throws -> some IntentResult {
-        print("SingleIntent")
+        print("SingleIntent \(SingleIntent.authenticationPolicy)")
         return .result()
     }
 }

@@ -52,6 +52,32 @@
           }
         }
       }
+    },
+    "SingleIntent with ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "SingleIntent with ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
+    "SingleIntent2 with ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "SingleIntent2 with ${applicationName}"
+            ]
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
