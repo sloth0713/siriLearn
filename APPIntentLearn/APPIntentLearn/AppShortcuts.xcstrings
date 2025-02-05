@@ -1,92 +1,14 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "${Entity} with ${applicationName}" : {
+    "${applicationName} ${Entity} with " : {
       "extractionState" : "extracted_with_value",
       "localizations" : {
         "en" : {
           "stringSet" : {
             "state" : "new",
             "values" : [
-              "${Entity} with ${applicationName}"
-            ]
-          }
-        }
-      }
-    },
-    "Get ${Book} with ${applicationName}" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringSet" : {
-            "state" : "new",
-            "values" : [
-              "Get ${Book} with ${applicationName}"
-            ]
-          }
-        }
-      }
-    },
-    "Get ${inboxEntity} with ${applicationName}" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringSet" : {
-            "state" : "new",
-            "values" : [
-              "Get ${inboxEntity} with ${applicationName}"
-            ]
-          }
-        }
-      }
-    },
-    "PlayVideoIntentImpl with ${applicationName}" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringSet" : {
-            "state" : "new",
-            "values" : [
-              "PlayVideoIntentImpl with ${applicationName}"
-            ]
-          }
-        }
-      }
-    },
-    "Search ${searchType} with ${applicationName}" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringSet" : {
-            "state" : "new",
-            "values" : [
-              "Search ${searchType} with ${applicationName}"
-            ]
-          }
-        }
-      }
-    },
-    "SingleIntent with ${applicationName}" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringSet" : {
-            "state" : "new",
-            "values" : [
-              "SingleIntent with ${applicationName}"
-            ]
-          }
-        }
-      }
-    },
-    "SingleIntent2 with ${applicationName}" : {
-      "extractionState" : "extracted_with_value",
-      "localizations" : {
-        "en" : {
-          "stringSet" : {
-            "state" : "new",
-            "values" : [
-              "SingleIntent2 with ${applicationName}"
+              "${applicationName} ${Entity} with "
             ]
           }
         }

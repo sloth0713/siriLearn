@@ -40,6 +40,10 @@ struct SelectGYLQuery: EntityQuery {
         
         var entities:[GYLEntity] = []
 
+        if (ABManager.share.disableIntent) {
+            return entities
+        }
+        
         for model:GYLModel in GYLManager.share.GYLModels{
             entities.append(GYLEntity(model: model, id: model.id))
         }

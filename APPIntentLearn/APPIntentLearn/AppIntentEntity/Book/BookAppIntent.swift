@@ -56,8 +56,8 @@ struct SingleIntent: AppIntent , PredictableIntent {
     static var predictionConfiguration: some IntentPredictionConfiguration {
         IntentPrediction {
             DisplayRepresentation(
-                title: "SingleIntent",
-                subtitle: "SingleIntent"
+                title: "aaa",
+                subtitle: "bbb"
             )
         }
     }
@@ -74,7 +74,7 @@ struct BookAppIntent: AppIntent {
 
     static var openAppWhenRun = true
     //用户选择后自动赋值
-    @Parameter(title: "Book Name", query: selectBookQuery1())
+    @Parameter(title: "Book Name", query: selectBookQuery1())//如果给query参数赋值，那么用户创建shortcut时就调用这里的query。否则调用Entity的query
     var Book: BookEntity
 
     func perform() async throws -> some IntentResult & ReturnsValue<BookEntity> & ProvidesDialog & OpensIntent & ShowsSnippetView{
@@ -148,6 +148,32 @@ struct ShortcutInsightsView: View {
 
 
 struct selectBookQuery1: EntityQuery {
+    
+    func entities(for identifiers: [BookEntity.ID]) async throws -> [BookEntity] {
+        var Books: [BookEntity] = []
+        _ = identifiers.compactMap { BookId in
+            let model:BookModel = BookManager.share.findBookWithId(id: BookId)
+            Books.append(BookEntity(model:model,id: model.id))
+        }
+        //用户选中的字符串，在这里组装成entities，返回给intent
+        return Books
+    }
+    
+    func suggestedEntities() async throws -> [BookEntity] {
+        
+        var entities:[BookEntity] = []
+
+        for model:BookModel in BookManager.share.Books{
+
+            entities.append(BookEntity(model: model, id: model.id))
+            
+        }
+        //展示所有的选择
+        return entities
+    }
+}
+
+struct selectBookQuery2: EntityQuery {
     
     func entities(for identifiers: [BookEntity.ID]) async throws -> [BookEntity] {
         var Books: [BookEntity] = []

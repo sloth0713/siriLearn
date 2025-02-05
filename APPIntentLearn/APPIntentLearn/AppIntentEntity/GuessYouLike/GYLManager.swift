@@ -11,9 +11,9 @@ class GYLManager{
     
     var GYLModels:[GYLModel] = []
     
-    init() {
+    init() { 
         self.GYLModels = [
-            GYLModel(name: "share", imageName: "square.and.arrow.up", location: .GYLLocation1,metaInfo:[bizLineNameKey:bizLineName1,"function":"share"]),
+            GYLModel(name: "gylold", imageName: "square.and.arrow.up", location: .GYLLocation1,metaInfo:[bizLineNameKey:bizLineName1,"function":"gylold"]),
             GYLModel(name: "download", imageName: "square.and.arrow.down", location: .GYLLocation2,metaInfo:[bizLineNameKey:bizLineName2,"function":"download"]),
             GYLModel(name: "write", imageName: "pencil.line", location: .GYLLocation3,metaInfo:[bizLineNameKey:bizLineName3,"function":"write"]),
         ]

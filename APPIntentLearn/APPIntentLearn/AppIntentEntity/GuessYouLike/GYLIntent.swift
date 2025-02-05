@@ -22,56 +22,67 @@ struct GYLIntent: AppIntent {
     @Parameter(title: "you like")
     var Entity: GYLEntity
 
-    func perform() async throws -> some IntentResult {
+    func perform() async throws -> some IntentResult & ProvidesDialog {
         
         let meta:[String:String] = Entity.model.metaInfo
+        var function:String = "unknown"
         if (meta[bizLineNameKey] == bizLineName1){
-            self.performBizLine1WithMeta(meta: meta)
+            function = self.performBizLine1WithMeta(meta: meta)
         }else if (meta[bizLineNameKey] == bizLineName2){
-            self.performBizLine2WithMeta(meta: meta)
+            function = self.performBizLine2WithMeta(meta: meta)
         }
         else if (meta[bizLineNameKey] == bizLineName3){
-            self.performBizLine3WithMeta(meta: meta)
+            function = self.performBizLine3WithMeta(meta: meta)
         }
         else if (meta[bizLineNameKey] == bizLineNameNew){
-            self.performBizLineNewWithMeta(meta: meta)
+            function = self.performBizLineNewWithMeta(meta: meta)
         }
         else if (meta[bizLineNameKey] == bizLineNameDefault){
-            self.performBizLineDefaultWithMeta(meta: meta)
+            function = self.performBizLineDefaultWithMeta(meta: meta)
         }
         
-        return .result()
+        return .result(dialog: IntentDialog(stringLiteral: "你打开了 \(function)"))
     }
     
     
-    func performBizLine1WithMeta(meta:[String:String]) {
+    func performBizLine1WithMeta(meta:[String:String]) -> String {
         if  let function:String = meta["function"]{
             print("go to \(function)")
+            return function
         }
+        return "unknown"
     }
     
-    func performBizLine2WithMeta(meta:[String:String]) {
+    func performBizLine2WithMeta(meta:[String:String]) -> String {
         if  let function:String = meta["function"]{
             print("go to \(function)")
+            return function
         }
+        return "unknown"
     }
     
-    func performBizLine3WithMeta(meta:[String:String]) {
+    func performBizLine3WithMeta(meta:[String:String]) -> String {
         if  let function:String = meta["function"]{
             print("go to \(function)")
+            return function
         }
+        return "unknown"
     }
     
-    func performBizLineNewWithMeta(meta:[String:String]) {
+    func performBizLineNewWithMeta(meta:[String:String]) -> String {
         if  let function:String = meta["function"]{
             print("go to \(function)")
+            return function
         }
+        return "unknown"
     }
     
-    func performBizLineDefaultWithMeta(meta:[String:String]) {
+    func performBizLineDefaultWithMeta(meta:[String:String]) -> String {
         if  let function:String = meta["function"]{
             print("go to \(function)")
+            return function
         }
+        return "unknown"
     }
     
 }

@@ -18,7 +18,7 @@ struct ContentView: View {
                 .foregroundStyle(.tint)
             Text(.now, style: .timer)
             Button {
-                ABManager.share.enableBookBusinessIntent = true
+                ABManager.share.disableIntent = false
                 EntAppIntentShortcuts.updateAppShortcutParameters()
             } label: {
                 Label("open intent", systemImage: "lock.open")
@@ -26,7 +26,7 @@ struct ContentView: View {
             
             
             Button {
-                ABManager.share.enableBookBusinessIntent = false
+                ABManager.share.disableIntent = true
                 EntAppIntentShortcuts.updateAppShortcutParameters()
             } label: {
                 Label("close intent", systemImage: "lock")

@@ -55,22 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5C6A4D48-033D-47A2-ADDF-55C002D22C9E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "Book"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "496EE45E-94FF-4767-93E8-D1929A03C718"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -80,8 +64,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
             endingLineNumber = "77"
-            landmarkName = "Book"
-            landmarkType = "24">
+            landmarkName = "BookAppIntent"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -302,8 +286,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "performBizLine1WithMeta(meta:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -318,8 +302,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
             landmarkName = "performBizLine2WithMeta(meta:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -334,8 +318,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "performBizLine3WithMeta(meta:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -350,8 +334,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "performBizLineNewWithMeta(meta:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -402,66 +386,6 @@
             endingLineNumber = "98"
             landmarkName = "entities(for:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6AE6F350-8A80-44DD-911B-060BCB54970D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "entities(for:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6AE6F350-8A80-44DD-911B-060BCB54970D - 91aa1702e6ef44b3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "APPIntentLearn.selectBookQuery1.suggestedEntities() async throws -&gt; Swift.Array&lt;APPIntentLearn.BookEntity&gt;"
-                  moduleName = "APPIntentLearn.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/siriLearn/APPIntentLearn/APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "141"
-                  endingLineNumber = "141">
-               </Location>
-               <Location
-                  uuid = "6AE6F350-8A80-44DD-911B-060BCB54970D - c28992313cae3dc9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for APPIntentLearn.selectBookQuery1.suggestedEntities() async throws -&gt; Swift.Array&lt;APPIntentLearn.BookEntity&gt;"
-                  moduleName = "APPIntentLearn.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/siriLearn/APPIntentLearn/APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "141"
-                  endingLineNumber = "141">
-               </Location>
-               <Location
-                  uuid = "6AE6F350-8A80-44DD-911B-060BCB54970D - bfcccc60965bdbe4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for APPIntentLearn.selectBookQuery1.entities(for: Swift.Array&lt;Swift.String&gt;) async throws -&gt; Swift.Array&lt;APPIntentLearn.BookEntity&gt;"
-                  moduleName = "APPIntentLearn.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/siriLearn/APPIntentLearn/APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "159"
-                  endingLineNumber = "159">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -526,6 +450,38 @@
             endingLineNumber = "38"
             landmarkName = "perform()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "33E2B40C-8A82-48D1-A2CF-919787FBFABD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "APPIntentLearn/AppIntentEntity/Book/BookAppIntent.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "suggestedEntities()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7229130C-529B-49D0-8C78-3DB7C9D0609F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "APPIntentLearn/MyShortcutsProvider.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "appShortcuts"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
