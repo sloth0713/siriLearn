@@ -13,6 +13,45 @@
           }
         }
       }
+    },
+    "${applicationName} Search ${searchType} with " : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "${applicationName} Search ${searchType} with "
+            ]
+          }
+        }
+      }
+    },
+    "Get ${Book} with ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "Get ${Book} with ${applicationName}"
+            ]
+          }
+        }
+      }
+    },
+    "Get ${inboxEntity} with ${applicationName}" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "Get ${inboxEntity} with ${applicationName}"
+            ]
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

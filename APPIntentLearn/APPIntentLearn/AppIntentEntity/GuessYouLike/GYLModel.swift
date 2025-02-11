@@ -7,7 +7,6 @@
 
 import Foundation
 
-let bizLineNameKey: String = "bizNameKey"
 let bizLineName1: String = "bizLineName1"
 let bizLineName2: String = "bizLineName2"
 let bizLineName3: String = "bizLineName3"
@@ -23,14 +22,16 @@ struct GYLModel : Identifiable, Hashable, Sendable {
     
     var name: String
     var imageName: String
+    var bizLineName: String
     var metaInfo:[String:String]
     var location: GYLLocation
     
-    init(name: String,imageName:String,location:GYLLocation,metaInfo:[String:String]) {
+    init(name: String,imageName:String,location:GYLLocation,bizLineName:String,metaInfo:[String:String]) {
         self.id = "GYLLocation0"
         self.name = name
         self.imageName = imageName
         self.location = location
+        self.bizLineName = bizLineName
         self.metaInfo = metaInfo
         self.id = self.idFromLocation(location: location)
     }

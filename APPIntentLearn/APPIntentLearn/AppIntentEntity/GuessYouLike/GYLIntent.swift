@@ -26,21 +26,21 @@ struct GYLIntent: AppIntent {
         
         let meta:[String:String] = Entity.model.metaInfo
         var function:String = "unknown"
-        if (meta[bizLineNameKey] == bizLineName1){
+        switch Entity.model.bizLineName {
+        case bizLineName1:
             function = self.performBizLine1WithMeta(meta: meta)
-        }else if (meta[bizLineNameKey] == bizLineName2){
+        case bizLineName2:
             function = self.performBizLine2WithMeta(meta: meta)
-        }
-        else if (meta[bizLineNameKey] == bizLineName3){
+        case bizLineName3:
             function = self.performBizLine3WithMeta(meta: meta)
-        }
-        else if (meta[bizLineNameKey] == bizLineNameNew){
+        case bizLineNameNew:
             function = self.performBizLineNewWithMeta(meta: meta)
-        }
-        else if (meta[bizLineNameKey] == bizLineNameDefault){
+        case bizLineNameDefault:
+            function = self.performBizLineDefaultWithMeta(meta: meta)
+        default:
             function = self.performBizLineDefaultWithMeta(meta: meta)
         }
-        
+
         return .result(dialog: IntentDialog(stringLiteral: "你打开了 \(function)"))
     }
     
