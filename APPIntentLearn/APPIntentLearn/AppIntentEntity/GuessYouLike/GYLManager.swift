@@ -15,8 +15,7 @@ class GYLManager{
     init() {
         //读旧的GYLModels，存储到self.GYLModels
         
-//        self.staticInitGYL()
-        
+        self.staticInitGYL()
         self.updateGYLFromStorage()
         self.updateGYLFromSettings()
         self.saveGYL()
@@ -65,11 +64,11 @@ class GYLManager{
             do {
                 let data = try Data(contentsOf: fileURL)
                 
-                if let dictArray = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
+                if let gylDicts = try JSONSerialization.jsonObject(with: data, options: []) as? [String:[String: Any]] {
                     print("Dictionary array loaded successfully:")
-                    print(dictArray)
+                    print(gylDicts)
                     
-                    for dict in dictArray {
+                    for dict in gylDicts.values {
                         let model = GYLModel(dict: dict)
                         
                         if model.valid {
@@ -85,13 +84,13 @@ class GYLManager{
     
     func saveGYL() {
         //存储GYLmodels
-        var dictArray = [[String:Any]]()
+        var dict : [String:[String:Any]] = [:]
         for model in self.GYLModels.values {
-            dictArray.append(model.transfer2Dict())
+            dict[model.id] = model.transfer2Dict()
         }
         
         do {
-            let data = try JSONSerialization.data(withJSONObject: dictArray, options: [])
+            let data = try JSONSerialization.data(withJSONObject: dict, options: [])
             
             if let fileURL = self.gylPath() {
                 
