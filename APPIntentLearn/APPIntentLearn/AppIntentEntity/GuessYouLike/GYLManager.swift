@@ -17,7 +17,8 @@ class GYLManager{
         
 //        self.staticInitGYL()
         
-        self.readGYLFromStorage()
+        self.updateGYLFromStorage()
+        self.updateGYLFromSettings()
         self.saveGYL()
     }
     
@@ -43,7 +44,22 @@ class GYLManager{
         return fileURL
     }
     
-    func readGYLFromStorage() {
+    func updateGYLFromSettings() {
+
+        let dict:[String:Any] = ["name":"gylSetting","imageName":"fan","location":"GYLLocation3","bizLineName":bizLineNameSetting,"metaInfo":["function":"aa"]]
+        
+        let dictArray:[[String:Any]] = [dict]
+        
+        for dict in dictArray {
+            let model = GYLModel(dict: dict)
+            
+            if model.valid {
+                self.GYLModels[model.location] = model
+            }
+        }
+    }
+    
+    func updateGYLFromStorage() {
         if let fileURL = self.gylPath() {
     
             do {

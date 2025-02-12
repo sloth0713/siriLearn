@@ -11,6 +11,7 @@ let bizLineName1: String = "bizLineName1"
 let bizLineName2: String = "bizLineName2"
 let bizLineName3: String = "bizLineName3"
 let bizLineNameNew: String = "bizLineNameNew"
+let bizLineNameSetting: String = "bizLineNameSetting"
 let bizLineNameDefault: String = "bizLineNameDefault"
 
 enum GYLLocation{
