@@ -31,10 +31,21 @@ class GYLManager{
         ]
     }
     
-    func readGYLFromStorage() {
+    
+    func gylPath () -> URL? {
+        
+        let fileURL:URL?
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let fileURL = documentDirectory.appendingPathComponent("data.plist")
-            
+            fileURL = documentDirectory.appendingPathComponent("data.plist")
+        }else {
+            fileURL = nil
+        }
+        return fileURL
+    }
+    
+    func readGYLFromStorage() {
+        if let fileURL = self.gylPath() {
+    
             do {
                 let data = try Data(contentsOf: fileURL)
                 
@@ -66,8 +77,7 @@ class GYLManager{
         do {
             let data = try JSONSerialization.data(withJSONObject: dictArray, options: [])
             
-            if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-                let fileURL = documentDirectory.appendingPathComponent("data.plist")
+            if let fileURL = self.gylPath() {
                 
                 try data.write(to: fileURL)
                 print("Data saved to file: \(fileURL.path)")

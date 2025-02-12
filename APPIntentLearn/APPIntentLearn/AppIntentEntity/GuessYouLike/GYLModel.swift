@@ -30,7 +30,6 @@ struct GYLModel : Identifiable, Hashable, Sendable {
     var valid: Bool = true
     
     init(name: String,imageName:String,location:GYLLocation,bizLineName:String,metaInfo:[String:String]) {
-        self.id = "GYLLocation0"
         self.name = name
         self.imageName = imageName
         self.location = location
