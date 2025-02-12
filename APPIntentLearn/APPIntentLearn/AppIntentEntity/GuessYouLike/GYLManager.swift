@@ -47,9 +47,9 @@ class GYLManager{
 
         let dict:[String:Any] = ["name":"gylSetting","imageName":"fan","location":"GYLLocation3","bizLineName":bizLineNameSetting,"metaInfo":["function":"aa"]]
         
-        let dictArray:[[String:Any]] = [dict]
+        let dictArray:[String:[String:Any]] = ["GYLLocation3":dict]
         
-        for dict in dictArray {
+        for dict in dictArray.values {
             let model = GYLModel(dict: dict)
             
             if model.valid {
