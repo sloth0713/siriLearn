@@ -33,7 +33,15 @@ struct ContentView: View {
             }
             
             Button {
-                GYLManager.share.updateGYLOfLocation(newGYL:GYLModel(name: "gylnew", imageName: "arrow.clockwise.circle", location: .GYLLocation1,bizLineName:bizLineNameNew,metaInfo:["function":"gylnew"]))
+                
+                if let model:GYLModel = GYLManager.share.GYLModels[.GYLLocation1] {
+                    if model.bizLineName == bizLineName1 {
+                        GYLManager.share.updateGYLOfLocation(newGYL:GYLModel(name: "gylnew", imageName: "arrow.clockwise.circle", location: .GYLLocation1,bizLineName:bizLineNameNew,metaInfo:["function":"gylnew"]))
+                    }else {
+                        GYLManager.share.updateGYLOfLocation(newGYL:GYLModel(name: "gylold", imageName: "square.and.arrow.up", location: .GYLLocation1,bizLineName:bizLineName1,metaInfo:["function":"gylold"]))
+                    }
+                }
+                
                 for _ in 0...10 {
                     EntAppIntentShortcuts.updateAppShortcutParameters()
                 }
