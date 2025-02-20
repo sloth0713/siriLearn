@@ -14,6 +14,8 @@ import Intents
 @available(iOS 18, *)
 struct APPIntentLearnApp: App {
     init() {
+        
+//        let ff:Foo = Foo.init(string: "aa")
         if (ABManager.share.useOnlineIntentIcon){
             downloadOnlineIntentImageLaunchTask()
         }else{
@@ -52,10 +54,11 @@ struct APPIntentLearnApp: App {
 //                IntentDonationManager
             let intent = SingleIntent()
             
-//            IntentDonationManager.shared.donate(intent: intent)
+            IntentDonationManager.shared.donate(intent: intent)
 //            INInteraction(intent: intent, response: nil).donate(completion: nil)
             
-//            let id:IntentDonationIdentifier = intent.donate()
+            let _:IntentDonationIdentifier = intent.donate()
+            
             Task {
                 do {
                     try await intent.perform()

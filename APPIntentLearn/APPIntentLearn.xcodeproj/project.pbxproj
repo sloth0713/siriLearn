@@ -10,6 +10,7 @@
 		2B0082522C9D236900D85E32 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0082512C9D236600D85E32 /* test.swift */; };
 		2B0082572C9D23AD00D85E32 /* ABManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0082532C9D23AD00D85E32 /* ABManager.swift */; };
 		2B0082582C9D23AD00D85E32 /* objcTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0082562C9D23AD00D85E32 /* objcTask.m */; };
+		2B1A59422D6742AB007D9191 /* Foo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1A59412D6742A7007D9191 /* Foo.swift */; };
 		2B1FED0F2C74824700325C8C /* SchemaIntentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FED0E2C74823E00325C8C /* SchemaIntentManager.swift */; };
 		2B1FED112C748B5900325C8C /* MyShortcutsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1FED102C748B4900325C8C /* MyShortcutsProvider.swift */; };
 		2B37EB592CEED6D900C0C96F /* GYLIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B37EB582CEED6CA00C0C96F /* GYLIntent.swift */; };
@@ -112,6 +113,7 @@
 		2B0082542C9D23AD00D85E32 /* APPIntentLearn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "APPIntentLearn-Bridging-Header.h"; sourceTree = "<group>"; };
 		2B0082552C9D23AD00D85E32 /* objcTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = objcTask.h; sourceTree = "<group>"; };
 		2B0082562C9D23AD00D85E32 /* objcTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = objcTask.m; sourceTree = "<group>"; };
+		2B1A59412D6742A7007D9191 /* Foo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foo.swift; sourceTree = "<group>"; };
 		2B1FED0E2C74823E00325C8C /* SchemaIntentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaIntentManager.swift; sourceTree = "<group>"; };
 		2B1FED102C748B4900325C8C /* MyShortcutsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyShortcutsProvider.swift; sourceTree = "<group>"; };
 		2B37EB582CEED6CA00C0C96F /* GYLIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GYLIntent.swift; sourceTree = "<group>"; };
@@ -285,6 +287,7 @@
 		2BBCCFBA2C635285004EB8C9 /* APPIntentLearn */ = {
 			isa = PBXGroup;
 			children = (
+				2B1A59412D6742A7007D9191 /* Foo.swift */,
 				2BEE3F542CE6015C00BE1138 /* AppShortcutsProviderOld.swift */,
 				2B0082532C9D23AD00D85E32 /* ABManager.swift */,
 				2B0082542C9D23AD00D85E32 /* APPIntentLearn-Bridging-Header.h */,
@@ -548,6 +551,7 @@
 			files = (
 				2BB783232C69E86000375FFC /* SchemaPhotoEntity.swift in Sources */,
 				2B93AA292C9D2592006886CA /* InboxEntity.swift in Sources */,
+				2B1A59422D6742AB007D9191 /* Foo.swift in Sources */,
 				2B0082522C9D236900D85E32 /* test.swift in Sources */,
 				2B37EB5D2CEED71300C0C96F /* GYLModel.swift in Sources */,
 				2BB858F12CB91C5700E51233 /* SearchIntent.swift in Sources */,
