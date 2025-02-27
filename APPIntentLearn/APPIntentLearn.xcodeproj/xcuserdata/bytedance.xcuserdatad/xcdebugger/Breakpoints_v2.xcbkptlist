@@ -478,8 +478,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "updateGYLFromStorage()"
             landmarkType = "7">
          </BreakpointContent>
@@ -574,9 +574,25 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "updateGYLFromSettings(deleteStarage:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D91DF7E-50EF-4434-8190-D1813FCF78EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "staticInitGYL()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

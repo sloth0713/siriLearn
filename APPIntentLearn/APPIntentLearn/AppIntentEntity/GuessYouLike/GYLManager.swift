@@ -15,20 +15,32 @@ class GYLManager{
     init() {
         //读旧的GYLModels，存储到self.GYLModels
         
-        self.staticInitGYL()
         self.updateGYLFromStorage()
-        self.updateGYLFromSettings(deleteStarage: false)
+//        self.updateGYLFromSettings(deleteStarage: false)//最好不要作为常规手段，否则第一个和storage的不一致，可能会导致更新慢的bug
+        self.staticInitGYL()
         self.saveGYL()
     }
     
-    func staticInitGYL () {
-        self.GYLModels = [
+    func staticInitGYL () {//优先级最低
+        var staticModels:[GYLModel] = [
             GYLModel(name: "gylold", imageName: "square.and.arrow.up", bizLineName:bizLineName1,metaInfo:["function":"gylold"]),
             
             GYLModel(name: "download", imageName: "square.and.arrow.down", bizLineName:bizLineName2,metaInfo:["function":"download"]),
             
             GYLModel(name: "write", imageName: "pencil.line", bizLineName:bizLineName3,metaInfo:["function":"write"])
         ]
+        
+        staticModels = staticModels.filter({ GYLModel in
+            for model in self.GYLModels {
+                if model.bizLineName == GYLModel.bizLineName {
+                    return false
+                }
+            }
+            return true
+        })
+        
+        self.GYLModels.append(contentsOf:staticModels)
+        
     }
     
     
