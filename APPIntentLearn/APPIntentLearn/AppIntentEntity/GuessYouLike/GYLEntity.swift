@@ -19,6 +19,8 @@ struct GYLEntity: AppEntity, Identifiable{
     static var typeDisplayRepresentation: TypeDisplayRepresentation = TypeDisplayRepresentation(name: LocalizedStringResource("chose you want to go"))
     
     var displayRepresentation: DisplayRepresentation {
+        
+        print("displayRepresentation name : \(model.name) image : \(model.imageName)")
         return DisplayRepresentation(title: LocalizedStringResource(stringLiteral: model.name),
                                      image: DisplayRepresentation.Image(systemName: model.imageName))
     }

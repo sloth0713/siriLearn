@@ -50,9 +50,9 @@ struct ContentView: View {
                 }
     
                 
-                for _ in 0...10 {
-                    EntAppIntentShortcuts.updateAppShortcutParameters()
-                }
+//                for _ in 0...10 {
+//                    EntAppIntentShortcuts.updateAppShortcutParameters()
+//                }
                 
             } label: {
                 Label("update GYL", systemImage: "arrow.clockwise.circle")

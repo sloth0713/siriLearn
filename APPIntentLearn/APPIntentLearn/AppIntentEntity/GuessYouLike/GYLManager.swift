@@ -136,13 +136,23 @@ class GYLManager{
         }
     }
     
+    @available(iOS 17.2, *)
     func updateGYLOfLocation(newGYL:GYLModel, location:Int) {
+//        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+            self.updateGYLOfLocationImmediately(newGYL: newGYL, location: location)
+//        }
+    }
+    
+    @available(iOS 17.2, *)
+    func updateGYLOfLocationImmediately(newGYL:GYLModel, location:Int) {
         
         self.GYLModels = self.GYLModels.filter{ $0.bizLineName != newGYL.bizLineName}
         self.GYLModels.insert(newGYL, at: location)
 
         //存储gylmodel
         self.saveGYL()
+        
+        EntAppIntentShortcuts.updateAppShortcutParameters()
     }
     
     func getCurrentBizlineNames() -> [String] {
