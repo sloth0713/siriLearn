@@ -41,10 +41,8 @@ struct GYLModel : Identifiable, Hashable, Sendable {
         
         if let name = dict["name"] as? String {
             self.name = name
-            self.id = name
         } else {
             self.name = "unknown"
-            self.id = name
             self.valid = false
         }
         
@@ -57,8 +55,10 @@ struct GYLModel : Identifiable, Hashable, Sendable {
         
         if let bizLineName = dict["bizLineName"] as? String {
             self.bizLineName = bizLineName
+            self.id = bizLineName
         } else {
             self.bizLineName = "unknown"
+            self.id = "unknown"
             self.valid = false
         }
         
