@@ -138,9 +138,9 @@ class GYLManager{
     
     @available(iOS 17.2, *)
     func updateGYLOfLocation(newGYL:GYLModel, location:Int) {
-//        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
             self.updateGYLOfLocationImmediately(newGYL: newGYL, location: location)
-//        }
+        }
     }
     
     @available(iOS 17.2, *)
