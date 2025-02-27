@@ -44,10 +44,8 @@ struct SelectGYLQuery: EntityQuery {
             return entities
         }
         
-        for location:GYLLocation in allGYL {
-            if let model = GYLManager.share.GYLModels[location] {
-                entities.append(GYLEntity(model: model, id: model.id))
-            }
+        for model:GYLModel in GYLManager.share.GYLModels {
+            entities.append(GYLEntity(model: model, id: model.id))
         }
         //展示所有的选择
         return entities

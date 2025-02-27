@@ -10,24 +10,24 @@ import Foundation
 class GYLManager{
     static let share = GYLManager()
     
-    var GYLModels:[GYLLocation:GYLModel] = [:]
+    var GYLModels:[GYLModel] = []
     
     init() {
         //读旧的GYLModels，存储到self.GYLModels
         
         self.staticInitGYL()
         self.updateGYLFromStorage()
-        self.updateGYLFromSettings()
+        self.updateGYLFromSettings(deleteStarage: false)
         self.saveGYL()
     }
     
     func staticInitGYL () {
         self.GYLModels = [
-            .GYLLocation1:GYLModel(name: "gylold", imageName: "square.and.arrow.up", location: .GYLLocation1,bizLineName:bizLineName1,metaInfo:["function":"gylold"]),
+            GYLModel(name: "gylold", imageName: "square.and.arrow.up", bizLineName:bizLineName1,metaInfo:["function":"gylold"]),
             
-            .GYLLocation2:GYLModel(name: "download", imageName: "square.and.arrow.down", location: .GYLLocation2,bizLineName:bizLineName2,metaInfo:["function":"download"]),
+            GYLModel(name: "download", imageName: "square.and.arrow.down", bizLineName:bizLineName2,metaInfo:["function":"download"]),
             
-            .GYLLocation3:GYLModel(name: "write", imageName: "pencil.line", location: .GYLLocation3,bizLineName:bizLineName3,metaInfo:["function":"write"])
+            GYLModel(name: "write", imageName: "pencil.line", bizLineName:bizLineName3,metaInfo:["function":"write"])
         ]
     }
     
@@ -43,17 +43,34 @@ class GYLManager{
         return fileURL
     }
     
-    func updateGYLFromSettings() {
+    func updateGYLFromSettings(deleteStarage:Bool) {
 
-        let dict:[String:Any] = ["name":"gylSetting","imageName":"fan","location":"GYLLocation3","bizLineName":bizLineNameSetting,"metaInfo":["function":"aa"]]
+        let dictArray:[[String:Any]] = [
+            ["name":"gylold","imageName":"square.and.arrow.up","bizLineName":bizLineName1,"metaInfo":["function":"gylold"]],
+            ["name":"download","imageName":"square.and.arrow.down","bizLineName":bizLineName2,"metaInfo":["function":"download"]],
+            ["name":"gylSetting","imageName":"fan","bizLineName":bizLineNameSetting,"metaInfo":["function":"aa"]]
+        ]
         
-        let dictArray:[String:[String:Any]] = ["GYLLocation3":dict]
-        
-        for dict in dictArray.values {
-            let model = GYLModel(dict: dict)
+        if deleteStarage {
+            self.GYLModels = []
+            for dict in dictArray {
+                let model = GYLModel(dict: dict)
+                if model.valid {
+                    self.GYLModels.append(model)
+                }
+            }
+        }else {
+            for dict in dictArray {
+                
+                let model = GYLModel(dict: dict)
+                if !model.valid {continue}
             
-            if model.valid {
-                self.GYLModels[model.location] = model
+                self.GYLModels = self.GYLModels.filter({ value in
+                    value.bizLineName != model.bizLineName
+                })
+                
+                self.GYLModels.append(model)
+                
             }
         }
     }
@@ -64,16 +81,21 @@ class GYLManager{
             do {
                 let data = try Data(contentsOf: fileURL)
                 
-                if let gylDicts = try JSONSerialization.jsonObject(with: data, options: []) as? [String:[String: Any]] {
+                if let gylDicts = try JSONSerialization.jsonObject(with: data, options: []) as? [[String: Any]] {
                     print("Dictionary array loaded successfully:")
                     print(gylDicts)
                     
-                    for dict in gylDicts.values {
+                    for dict in gylDicts {
                         let model = GYLModel(dict: dict)
                         
-                        if model.valid {
-                            self.GYLModels[model.location] = model
-                        }
+                        if !model.valid {continue}
+                            
+                        self.GYLModels = self.GYLModels.filter({ value in
+                            value.bizLineName != model.bizLineName
+                        })
+                            
+                        self.GYLModels.append(model)
+                        
                     }
                 }
             } catch {
@@ -84,9 +106,9 @@ class GYLManager{
     
     func saveGYL() {
         //存储GYLmodels
-        var dict : [String:[String:Any]] = [:]
-        for model in self.GYLModels.values {
-            dict[model.id] = model.transfer2Dict()
+        var dict : [[String:Any]] = []
+        for model in self.GYLModels {
+            dict.append(model.transfer2Dict())
         }
         
         do {
@@ -102,15 +124,26 @@ class GYLManager{
         }
     }
     
-    func updateGYLOfLocation(newGYL:GYLModel) {
-        self.GYLModels[newGYL.location] = newGYL
+    func updateGYLOfLocation(newGYL:GYLModel, location:Int) {
+        
+        self.GYLModels = self.GYLModels.filter{ $0.bizLineName != newGYL.bizLineName}
+        self.GYLModels.insert(newGYL, at: location)
+
         //存储gylmodel
         self.saveGYL()
     }
     
+    func getCurrentBizlineNames() -> [String] {
+        var array:[String] = []
+        for model in GYLModels {
+            array.append(model.bizLineName)
+        }
+        return array
+    }
+    
     func findModelWithId(id:String) -> GYLModel{
-        var findModel : GYLModel = GYLModel(name: "default", imageName: "play.fill", location: .GYLLocation1,bizLineName:bizLineNameDefault,metaInfo:["function":"default"])
-        for model:GYLModel in GYLManager.share.GYLModels.values{
+        var findModel : GYLModel = GYLModel(name: "default", imageName: "play.fill", bizLineName:bizLineNameDefault,metaInfo:["function":"default"])
+        for model:GYLModel in GYLManager.share.GYLModels{
             if (model.id == id){
                 findModel = model
             }

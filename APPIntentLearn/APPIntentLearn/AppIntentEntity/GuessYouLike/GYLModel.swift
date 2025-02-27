@@ -14,11 +14,11 @@ let bizLineNameNew: String = "bizLineNameNew"
 let bizLineNameSetting: String = "bizLineNameSetting"
 let bizLineNameDefault: String = "bizLineNameDefault"
 
-enum GYLLocation{
-    case GYLLocation1,GYLLocation2,GYLLocation3,GYLLocation4,GYLLocation5//iphone 3个，ipad 5个
-}
+//enum GYLLocation{
+//    case GYLLocation1,GYLLocation2,GYLLocation3,GYLLocation4,GYLLocation5//iphone 3个，ipad 5个
+//}
 
-let allGYL:[GYLLocation] = [.GYLLocation1,.GYLLocation2,.GYLLocation3,.GYLLocation4,.GYLLocation5]
+//let allGYL:[GYLLocation] = [.GYLLocation1,.GYLLocation2,.GYLLocation3,.GYLLocation4,.GYLLocation5]
 
 struct GYLModel : Identifiable, Hashable, Sendable {
     var id: String
@@ -27,24 +27,24 @@ struct GYLModel : Identifiable, Hashable, Sendable {
     var imageName: String
     var bizLineName: String
     var metaInfo:[String:String]
-    var location: GYLLocation
     var valid: Bool = true
     
-    init(name: String,imageName:String,location:GYLLocation,bizLineName:String,metaInfo:[String:String]) {
+    init(name: String,imageName:String,bizLineName:String,metaInfo:[String:String]) {
         self.name = name
         self.imageName = imageName
-        self.location = location
         self.bizLineName = bizLineName
         self.metaInfo = metaInfo
-        self.id = Self.stringFromLocation(location: location)
+        self.id = self.name
     }
     
     init(dict:[String:Any]) {
         
         if let name = dict["name"] as? String {
             self.name = name
+            self.id = name
         } else {
             self.name = "unknown"
+            self.id = name
             self.valid = false
         }
         
@@ -52,15 +52,6 @@ struct GYLModel : Identifiable, Hashable, Sendable {
             self.imageName = imageName
         } else {
             self.imageName = "unknown"
-            self.valid = false
-        }
-        
-        if let location = dict["location"] as? String {
-            self.location = Self.LocationFromString(location: location)
-            self.id = Self.stringFromLocation(location: self.location)
-        } else {
-            self.location = .GYLLocation1
-            self.id = "unknown"
             self.valid = false
         }
         
@@ -79,53 +70,16 @@ struct GYLModel : Identifiable, Hashable, Sendable {
         }
     }
     
-    
-    static func stringFromLocation(location:GYLLocation) -> String {
-        switch location {
-        case .GYLLocation1:
-            return "GYLLocation1"
-        case .GYLLocation2:
-            return "GYLLocation2"
-        case .GYLLocation3:
-            return "GYLLocation3"
-        case .GYLLocation4:
-            return "GYLLocation4"
-        case .GYLLocation5:
-            return "GYLLocation5"
-        }
-    }
-    
-    static func LocationFromString(location:String) -> GYLLocation {
-        
-        if location == "GYLLocation1" {
-            return .GYLLocation1
-        }
-        if location == "GYLLocation2" {
-            return .GYLLocation2
-        }
-        if location == "GYLLocation3" {
-            return .GYLLocation3
-        }
-        if location == "GYLLocation4" {
-            return .GYLLocation4
-        }
-        if location == "GYLLocation5" {
-            return .GYLLocation5
-        }
-        
-        return .GYLLocation1
-    }
-    
     func transfer2Dict() -> [String:Any]{
         
-        let dict = ["name":name, "imageName":imageName, "bizLineName":bizLineName,"metaInfo":metaInfo, "location":Self.stringFromLocation(location: location)] as [String : Any]
+        let dict = ["name":name, "imageName":imageName, "bizLineName":bizLineName,"metaInfo":metaInfo] as [String : Any]
         
         return dict
     }
     
     func DictTransfer2Model() -> [String:Any]{
         
-        let dict = ["name":name, "imageName":imageName, "bizLineName":bizLineName,"metaInfo":metaInfo, "location":Self.stringFromLocation(location: location)] as [String : Any]
+        let dict = ["name":name, "imageName":imageName, "bizLineName":bizLineName,"metaInfo":metaInfo] as [String : Any]
         
         return dict
     }

@@ -9,7 +9,8 @@ import Foundation
 import AppIntents
 import CoreSpotlight
 
-@objc class ABManager:NSObject{
+class ABManager:NSObject{
+//    static var kk:objcTask = objcTask()
     static var share : ABManager = ABManager()
     
     var useOnlineIntentIcon:Bool
