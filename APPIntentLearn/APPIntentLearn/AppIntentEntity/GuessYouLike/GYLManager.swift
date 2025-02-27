@@ -7,10 +7,14 @@
 
 import Foundation
 
+@available(iOS 17.2, *)
 class GYLManager{
     static let share = GYLManager()
     
     var GYLModels:[GYLModel] = []
+    
+    var workItem: DispatchWorkItem?
+
     
     init() {
         //读旧的GYLModels，存储到self.GYLModels
@@ -136,14 +140,14 @@ class GYLManager{
         }
     }
     
-    @available(iOS 17.2, *)
     func updateGYLOfLocation(newGYL:GYLModel, location:Int) {
-        Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { _ in
+        workItem?.cancel()
+        workItem = DispatchWorkItem {
             self.updateGYLOfLocationImmediately(newGYL: newGYL, location: location)
         }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: workItem!)
     }
     
-    @available(iOS 17.2, *)
     func updateGYLOfLocationImmediately(newGYL:GYLModel, location:Int) {
         
         self.GYLModels = self.GYLModels.filter{ $0.bizLineName != newGYL.bizLineName}

@@ -10,6 +10,7 @@ import Foundation
 import CoreSpotlight
 import SwiftUI
 
+@available(iOS 17.2, *)
 struct GYLEntity: AppEntity, Identifiable{
     
     var model: GYLModel
@@ -27,6 +28,7 @@ struct GYLEntity: AppEntity, Identifiable{
     
 }
 
+@available(iOS 17.2, *)
 struct SelectGYLQuery: EntityQuery {
     
     func entities(for identifiers: [GYLEntity.ID]) async throws -> [GYLEntity] {

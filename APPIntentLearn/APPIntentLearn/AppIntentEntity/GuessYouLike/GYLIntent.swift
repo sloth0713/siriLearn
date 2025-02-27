@@ -13,6 +13,7 @@
 import AppIntents
 import SwiftUI
 
+@available(iOS 17.2, *)
 struct GYLIntent: AppIntent {
     
     static var title: LocalizedStringResource { "Guess you like intent" }
