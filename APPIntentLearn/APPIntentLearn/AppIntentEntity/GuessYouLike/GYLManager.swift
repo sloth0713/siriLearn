@@ -151,6 +151,8 @@ class GYLManager{
             DispatchQueue.main.asyncAfter(wallDeadline: .now() + 3, execute: DispatchWorkItem(block: {
                 self.intervalFlag = true
             }))
+            
+            print("updateGYLOfLocation")
         } else {
             print("exceed update frequency, this update won't excute")
         }

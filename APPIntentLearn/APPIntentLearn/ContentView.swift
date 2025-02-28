@@ -11,6 +11,8 @@ import SwiftUI
 struct ContentView: View {
 //    var current:int
     
+    @State private var buttonLabel = GYLManager.share.GYLModels.first?.name ?? "unknown"
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -34,6 +36,8 @@ struct ContentView: View {
             
             Button {
                 
+                buttonLabel = GYLManager.share.GYLModels.first?.name ?? "unknown"
+                
                 let location:Int = 0
                 
                 if GYLManager.share.GYLModels.count-1 > location {
@@ -55,7 +59,7 @@ struct ContentView: View {
 //                }
                 
             } label: {
-                Label("update GYL", systemImage: "arrow.clockwise.circle")
+                Label("update GYL: \(buttonLabel)", systemImage: "arrow.clockwise.circle")
             }
 
         }
