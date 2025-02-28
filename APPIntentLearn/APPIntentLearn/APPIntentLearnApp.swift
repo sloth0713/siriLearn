@@ -19,7 +19,10 @@ struct APPIntentLearnApp: App {
         if (ABManager.share.useOnlineIntentIcon){
             downloadOnlineIntentImageLaunchTask()
         }else{
-            EntAppIntentShortcuts.updateAppShortcutParameters()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                _ = GYLManager.share
+                EntAppIntentShortcuts.updateAppShortcutParameters()//系统bug，这个方法会子线程更新，如果此时app进后台或者被杀死，则会更新失败   <#code#>
+            }
             
             self.donateIntent()
 //            self.donateToCoreSpotlight()

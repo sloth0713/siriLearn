@@ -13,7 +13,7 @@ class GYLManager{
     
     var GYLModels:[GYLModel] = []
     
-    var workItem: DispatchWorkItem?
+    var intervalFlag:Bool = false
 
     
     init() {
@@ -23,6 +23,10 @@ class GYLManager{
 //        self.updateGYLFromSettings(deleteStarage: false)//最好不要作为常规手段，否则第一个和storage的不一致，可能会导致更新慢的bug
         self.staticInitGYL()
         self.saveGYL()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.intervalFlag = true
+        }
     }
     
     func staticInitGYL () {//优先级最低
@@ -141,11 +145,16 @@ class GYLManager{
     }
     
     func updateGYLOfLocation(newGYL:GYLModel, location:Int) {
-        workItem?.cancel()
-        workItem = DispatchWorkItem {
+        if self.intervalFlag {
             self.updateGYLOfLocationImmediately(newGYL: newGYL, location: location)
+            self.intervalFlag = false
+            DispatchQueue.main.asyncAfter(wallDeadline: .now() + 3, execute: DispatchWorkItem(block: {
+                self.intervalFlag = true
+            }))
+        } else {
+            print("exceed update frequency, this update won't excute")
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: workItem!)
+        
     }
     
     func updateGYLOfLocationImmediately(newGYL:GYLModel, location:Int) {

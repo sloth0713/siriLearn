@@ -37,12 +37,12 @@ class EntAppIntentShortcuts: AppShortcutsProvider {
                         "\(.applicationName) \(\.$Entity) with ",
                              ],
                     shortTitle: "Guess you",
-                    systemImageName: "heart",
+                    systemImageName: "fan",
                     parameterPresentation: ParameterPresentation(
                         for: \.$Entity,
                         summary: Summary("\(\.$Entity)"),
                         optionsCollections: {
-                            OptionsCollection(SelectGYLQuery(), title: "Guess you", systemImageName: "heart")
+                            OptionsCollection(SelectGYLQuery(), title: "Guess you", systemImageName: "fan")
                         }
                     ))
         
