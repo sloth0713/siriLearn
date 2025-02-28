@@ -36,7 +36,6 @@ struct ContentView: View {
             
             Button {
                 
-                buttonLabel = GYLManager.share.GYLModels.first?.name ?? "unknown"
                 
                 let location:Int = 0
                 
@@ -53,7 +52,7 @@ struct ContentView: View {
                     print()
                 }
     
-                
+                buttonLabel = GYLManager.share.GYLModels.first?.name ?? "unknown"
 //                for _ in 0...10 {
 //                    EntAppIntentShortcuts.updateAppShortcutParameters()
 //                }
