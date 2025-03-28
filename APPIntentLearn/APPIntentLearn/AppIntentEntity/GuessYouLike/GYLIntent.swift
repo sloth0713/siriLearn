@@ -25,6 +25,11 @@ struct GYLIntent: AppIntent {
 
     func perform() async throws -> some IntentResult & ProvidesDialog {
         
+//        如果var Entity: GYLEntity?
+//        guard let en = Entity else {
+//            return .result(dialog: IntentDialog(stringLiteral: "你打开了 "))
+//        }
+        
         let meta:[String:String] = Entity.model.metaInfo
         var function:String = "unknown"
         switch Entity.model.bizLineName {

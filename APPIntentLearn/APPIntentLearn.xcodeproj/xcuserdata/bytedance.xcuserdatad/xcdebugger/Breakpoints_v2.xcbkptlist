@@ -94,8 +94,8 @@
             filePath = "APPIntentLearn/APPIntentLearnApp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
             landmarkName = "downloadImage(name:from:completion:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +158,8 @@
             filePath = "APPIntentLearn/APPIntentLearnApp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "donateIntent()"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "APPIntentLearn/APPIntentLearnApp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
             landmarkName = "asyncTest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,8 +206,8 @@
             filePath = "APPIntentLearn/APPIntentLearnApp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "asyncTest()"
             landmarkType = "7">
          </BreakpointContent>
@@ -254,8 +254,8 @@
             filePath = "APPIntentLearn/APPIntentLearnApp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "donateToCoreSpotlight()"
             landmarkType = "7">
          </BreakpointContent>
@@ -270,8 +270,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "performBizLine1WithMeta(meta:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -286,8 +286,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "performBizLine2WithMeta(meta:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -302,8 +302,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "performBizLine3WithMeta(meta:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -318,8 +318,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLIntent.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "performBizLineNewWithMeta(meta:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -382,8 +382,8 @@
             filePath = "APPIntentLearn/APPIntentLearnApp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -398,8 +398,8 @@
             filePath = "APPIntentLearn/APPIntentLearnApp.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "donateIntent()"
             landmarkType = "7">
          </BreakpointContent>
@@ -462,8 +462,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "updateGYLFromStorage()"
             landmarkType = "7">
          </BreakpointContent>
@@ -478,25 +478,9 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLEntity.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "suggestedEntities()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "08FC5D80-8D7D-4FC5-8FCE-545BDCCCA960"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "APPIntentLearn/APPIntentLearnApp.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -542,8 +526,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "updateGYLFromSettings(deleteStarage:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -558,8 +542,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "staticInitGYL()"
             landmarkType = "7">
          </BreakpointContent>
@@ -574,25 +558,9 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLEntity.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "suggestedEntities()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "16693567-664D-43D6-97E7-A85B98DD2242"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLEntity.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "entities(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -606,8 +574,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLEntity.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "GYLEntity"
             landmarkType = "14">
          </BreakpointContent>
@@ -638,8 +606,8 @@
             filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
             landmarkName = "updateGYLOfLocationImmediately(newGYL:location:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -647,110 +615,80 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C25BE9EB-D589-4CE7-8BDC-ED70841619B1"
-            shouldBeEnabled = "No"
+            uuid = "234DDFAE-9519-4263-8EF5-1E34F404F758"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "APPIntentLearn/APPIntentLearnApp.swift"
+            filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLEntity.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "init()"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "entities(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AFF6861E-7966-44E0-9FB8-9F807BAB71F0"
-            shouldBeEnabled = "No"
+            uuid = "2F7C6AE8-C5F9-48B1-A07D-0A4070D3B950"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLManager.swift"
+            filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLEntity.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "updateGYLOfLocation(newGYL:location:)"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "suggestedEntities()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1E98A431-B8D6-40A0-9775-6D444EF457D1"
-            shouldBeEnabled = "No"
+            uuid = "41E00243-7A7E-4D9C-A052-D79CA586B24C"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLManager.swift"
+            filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLEntity.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "init()"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "entities(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7B2B8D2C-53A2-4C63-A361-9A02D232B5D1"
-            shouldBeEnabled = "No"
+            uuid = "2FA2144B-B7B8-4FE9-9255-FEB3FEFD0BD7"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "APPIntentLearn/APPIntentLearnApp.swift"
+            filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLEntity.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "init()"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "suggestedEntities()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7B2B8D2C-53A2-4C63-A361-9A02D232B5D1 - 946ff4409575fbe4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "APPIntentLearn.APPIntentLearnApp.init() -&gt; APPIntentLearn.APPIntentLearnApp"
-                  moduleName = "APPIntentLearn.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/git/siriLearn/APPIntentLearn/APPIntentLearn/APPIntentLearnApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "22"
-                  endingLineNumber = "22">
-               </Location>
-               <Location
-                  uuid = "7B2B8D2C-53A2-4C63-A361-9A02D232B5D1 - 64ff8e3212257b86"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in APPIntentLearn.APPIntentLearnApp.init() -&gt; APPIntentLearn.APPIntentLearnApp"
-                  moduleName = "APPIntentLearn.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/bytedance/Documents/git/siriLearn/APPIntentLearn/APPIntentLearn/APPIntentLearnApp.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A2C0BA1C-F072-41D7-A665-7CE17951C484"
-            shouldBeEnabled = "No"
+            uuid = "7DC79350-BFA1-4AEF-B571-0E2D847294DB"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "APPIntentLearn/APPIntentLearnApp.swift"
+            filePath = "APPIntentLearn/AppIntentEntity/GuessYouLike/GYLEntity.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "init()"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "suggestedEntities()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
