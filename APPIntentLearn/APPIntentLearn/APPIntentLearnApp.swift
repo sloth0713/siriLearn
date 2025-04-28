@@ -9,11 +9,17 @@ import SwiftUI
 import CoreSpotlight
 import AppIntents
 import Intents
+import WidgetKit
+
 
 @main
 @available(iOS 18, *)
 struct APPIntentLearnApp: App {
     init() {
+        
+
+        @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+   
         
 //        let ff:Foo = Foo.init(string: "aa")
         if (ABManager.share.useOnlineIntentIcon){
@@ -21,15 +27,61 @@ struct APPIntentLearnApp: App {
         }else{
             DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 _ = GYLManager.share
-                EntAppIntentShortcuts.updateAppShortcutParameters()//系统bug，这个方法会子线程更新，如果此时app进后台或者被杀死，则会更新失败   <#code#>
+                EntAppIntentShortcuts.updateAppShortcutParameters()//系统bug，这个方法会子线程更新，如果此时app进后台或者被杀死，则会更新失败
             }
             
+            Task {
+                do {
+                    let controls = try await ControlCenter.shared.currentControls()
+                    print("fdsa")
+                }
+                catch{
+                    print("dfsa")
+                }
+            }
+            self.widgetABTask()
             self.donateIntent()
 //            self.donateToCoreSpotlight()
 //            self.asyncTest()
         }
         
     }
+    
+    
+    
+    public func widgetABTask() {
+    
+        let appGroupName = "group.APPIntentLearn"
+        
+        guard let shareStorage = UserDefaults(suiteName: appGroupName) else {
+            return
+        }
+    
+        
+        var captureWidgetState:String = "-1,-1"
+        if let savedState = shareStorage.string(forKey: KTTKWidgetStateCaptureWidget) {//改成appgroup
+            captureWidgetState = savedState
+        }
+        
+        let stateArray = captureWidgetState.components(separatedBy: ",")
+        if stateArray.count == 2 {
+//            let installState = Int(stateArray[0])
+            let ABState:String = stateArray[1]
+            
+            var captureWidgetVid = KTTKWidgetABVidUnknown
+            
+            if ABState == "0" {
+                captureWidgetVid = "0000000"
+            }
+            
+            if ABState == "1" {
+                captureWidgetVid = "1111111"
+            }
+            
+            print(captureWidgetVid)
+        }
+    }
+    
     func donateToCoreSpotlight() {
         Task {
             do {

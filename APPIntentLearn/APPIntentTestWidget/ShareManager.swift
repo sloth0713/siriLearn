@@ -8,6 +8,10 @@
 import SwiftUI
 import WidgetKit
 
+let KTTKWidgetStateFileName:String = "KTTKWidgetStateFileName"
+let KTTKWidgetStateCaptureWidget:String = "KTTKWidgetStateCaptureWidget"
+let KTTKWidgetABVidUnknown:String = "KTTKWidgetABVidUnknown"
+
 @available(iOS 18, *)
 class ShareManager {
     static let shared = ShareManager()
@@ -22,6 +26,14 @@ class ShareManager {
             self.isTimerOn = false
             ControlCenter.shared.reloadAllControls()
         }
+    }
+    func buttonText() -> String{
+        appear()
+        return "ttt"
+    }
+    
+    func appear() {
+        print("widget appear")
     }
     
 }

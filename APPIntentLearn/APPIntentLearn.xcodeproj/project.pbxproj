@@ -170,6 +170,7 @@
 		2BBCDC012C661E65004EB8C9 /* BookEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEntity.swift; sourceTree = "<group>"; };
 		2BBCDC032C661E6D004EB8C9 /* BookAppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAppIntent.swift; sourceTree = "<group>"; };
 		2BEE3F542CE6015C00BE1138 /* AppShortcutsProviderOld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShortcutsProviderOld.swift; sourceTree = "<group>"; };
+		2BFED4F02DBF638E005EAECB /* APPIntentTestWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = APPIntentTestWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +265,7 @@
 		2BBCCFAF2C635285004EB8C9 = {
 			isa = PBXGroup;
 			children = (
+				2BFED4F02DBF638E005EAECB /* APPIntentTestWidgetExtension.entitlements */,
 				2BBCCFBA2C635285004EB8C9 /* APPIntentLearn */,
 				2BBCCFCB2C635287004EB8C9 /* APPIntentLearnTests */,
 				2BBCCFD52C635287004EB8C9 /* APPIntentLearnUITests */,
@@ -928,6 +930,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = APPIntentTestWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5Z4W2PM247;
@@ -955,6 +958,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = APPIntentTestWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5Z4W2PM247;

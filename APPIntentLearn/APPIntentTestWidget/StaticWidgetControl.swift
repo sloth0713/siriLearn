@@ -31,7 +31,7 @@ struct StaticWidgetControlButton: ControlWidget {
         StaticControlConfiguration(kind: Self.kind) {
             ControlWidgetButton( action: ButtonWidgetControlIntent()){
                 Image(systemName: "play.rectangle.fill")
-                Text("Button Control")
+                Text(ShareManager.shared.buttonText())
             }
         }
         .displayName("Button Control")
